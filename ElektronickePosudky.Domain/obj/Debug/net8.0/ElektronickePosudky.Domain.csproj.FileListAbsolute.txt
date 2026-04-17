@@ -1,0 +1,11 @@
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/bin/Debug/net8.0/ElektronickePosudky.Domain.deps.json
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/bin/Debug/net8.0/ElektronickePosudky.Domain.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/bin/Debug/net8.0/ElektronickePosudky.Domain.pdb
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/ElektronickePosudky.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/ElektronickePosudky.Domain.AssemblyInfoInputs.cache
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/ElektronickePosudky.Domain.AssemblyInfo.cs
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/ElektronickePosudky.Domain.csproj.CoreCompileInputs.cache
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/ElektronickePosudky.Domain.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/refint/ElektronickePosudky.Domain.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/ElektronickePosudky.Domain.pdb
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/ref/ElektronickePosudky.Domain.dll

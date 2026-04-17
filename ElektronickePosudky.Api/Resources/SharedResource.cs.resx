@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <data name="SuccessMessage" xml:space="preserve">
+    <value>Lékařský posudek byl úspěšně vytvořen.</value>
+  </data>
+
+  <data name="ValidationErrorTitle" xml:space="preserve">
+    <value>Došlo k chybám validace.</value>
+  </data>
+
+  <data name="PosudekNotFoundTitle" xml:space="preserve">
+    <value>Lékařský posudek nebyl nalezen.</value>
+  </data>
+
+  <data name="PosudekNotFoundDetail" xml:space="preserve">
+    <value>Lékařský posudek s ID '{0}' neexistuje.</value>
+  </data>
+
+  <data name="ConcurrencyConflictTitle" xml:space="preserve">
+    <value>Konflikt souběžných úprav</value>
+  </data>
+  <data name="ConcurrencyConflictDetail" xml:space="preserve">
+    <value>Záznam byl upraven jiným uživatelem. Načtěte prosím nejnovější verzi a zkuste to znovu.</value>
+  </data>
+
+  <data name="DatumDoInvalid" xml:space="preserve">
+    <value>Datum 'do' musí být pozdější než datum 'od'.</value>
+  </data>
+
+  <data name="IcoInvalid" xml:space="preserve">
+    <value>Neplatný formát IČO.</value>
+  </data>
+  
+  <data name="SizeInvalid" xml:space="preserve">
+    <value>Velikost musí být kladné číslo.</value>
+  </data>
+
+  <data name="PageInvalid" xml:space="preserve">
+    <value>Číslo stránky musí být kladné celé číslo.</value>
+  </data>
+
+  <data name="PageNumberInvalid" xml:space="preserve">
+    <value>Číslo stránky musí být větší nebo rovno 1.</value>
+  </data>
+  
+  <data name="PageSizeInvalid" xml:space="preserve">
+    <value>Velikost stránky musí být mezi 1 a 100.</value>
+  </data>
+  
+  <data name="RidTooLong" xml:space="preserve">
+    <value>Identifikátor pacienta (RID) je příliš dlouhý.</value>
+  </data>
+
+  <data name="CiselnikNotFoundTitle" xml:space="preserve">
+    <value>Číselník nebyl nalezen.</value>
+  </data>
+
+  <data name="CiselnikNotFoundDetail" xml:space="preserve">
+    <value>Číselník s kódem '{0}' neexistuje.</value>
+  </data>
+  
+  <data name="CiselnikPolozkaNotFoundTitle" xml:space="preserve">
+    <value>Položka číselníku nebyla nalezena.</value>
+  </data>
+  
+  <data name="CiselnikPolozkaNotFoundDetail" xml:space="preserve">
+    <value>Položka číselníku s kódem '{0}' neexistuje v číselníku '{1}'.</value>
+  </data>
+
+  <data name="NeParameter" xml:space="preserve">
+    <value>Neplatný vstupní parametr.</value>
+  </data>
+  
+  <data name="NeParameterDetail" xml:space="preserve">
+    <value>Některé vstupní položky neprošly validací.</value>
+  </data>
+
+  <data name="StateConflictTitle" xml:space="preserve">
+    <value>Konflikt stavu</value>
+  </data>
+  
+  <data name="StateConflictDetail" xml:space="preserve">
+    <value>Lékařský posudek nelze v aktuálním stavu zneplatnit.</value>
+  </data>
+  
+  <data name="RequestTimeoutTitle" xml:space="preserve">
+    <value>Časový limit požadavku vypršel</value>
+  </data>
+  
+  <data name="RequestTimeoutDetail" xml:space="preserve">
+    <value>Při zpracování požadavku vypršel časový limit. Zkuste to prosím znovu.</value>
+  </data>
+
+  <data name="RidInvalidLength" xml:space="preserve">
+    <value>Hodnota RID musí mít 10 znaků.</value>
+  </data>
+
+  <data name="KrzpIdRequired" xml:space="preserve">
+    <value>Identifikátor KRZP je povinný.</value>
+  </data>
+  <data name="CodebookKodRequired" xml:space="preserve">
+    <value>Kód číselníku je povinný.</value>
+  </data>
+  <data name="CodebookVerzeRequired" xml:space="preserve">
+    <value>Verze číselníku je povinná.</value>
+  </data>
+  <data name="ZpusobilostiRequired" xml:space="preserve">
+    <value>Lékařský posudek musí obsahovat alespoň jednu způsobilost.</value>
+  </data>
+  <data name="VysledekRequired" xml:space="preserve">
+    <value>Výsledek způsobilosti je povinný.</value>
+  </data>
+  <data name="SkupinaZadateleRidicRequired" xml:space="preserve">
+    <value>Skupina žadatele/řidiče je povinná.</value>
+  </data>
+  <data name="SkupinyRidicskehoOpravneniRequired" xml:space="preserve">
+    <value>Je vyžadována alespoň jedna skupina řidičského oprávnění.</value>
+  </data>
+  <data name="HarmonizovanyKodRequired" xml:space="preserve">
+    <value>Harmonizovaný kód je povinný.</value>
+  </data>
+  <data name="NarodniKodRequired" xml:space="preserve">
+    <value>Národní kód je povinný.</value>
+  </data>
+  <data name="SkupinaRoRequired" xml:space="preserve">
+    <value>Skupina řidičského oprávnění je povinná.</value>
+  </data>
+  <data name="TypAkceRequired" xml:space="preserve">
+    <value>Typ akce je povinný.</value>
+  </data>
+  <data name="StavPosudkuRequired" xml:space="preserve">
+    <value>Stav posudku je povinný.</value>
+  </data>
+  <data name="DruhProhlidkyRequired" xml:space="preserve">
+    <value>Druh prohlídky je povinný.</value>
+  </data>
+  <data name="DruhPosudkuRequired" xml:space="preserve">
+    <value>Druh posudku je povinný.</value>
+  </data>
+  <data name="DatumVystaveniRequired" xml:space="preserve">
+    <value>Datum vystavení je povinné.</value>
+  </data>
+  <data name="DatumVystaveniFuture" xml:space="preserve">
+    <value>Datum vystavení nesmí být v budoucnosti.</value>
+  </data>
+  <data name="PlatnostDoInvalid" xml:space="preserve">
+    <value>Platnost do musí být pozdější než datum vystavení.</value>
+  </data>
+  <data name="PosudekIdRequired" xml:space="preserve">
+    <value>Identifikátor posudku je povinný.</value>
+  </data>
+  <data name="CodebookKodInvalidLength" xml:space="preserve">
+    <value>Kód číselníku musí mít délku 10 znaků.</value>
+  </data>
+  <data name="IfMatchRequired" xml:space="preserve">
+    <value>Hlavička If-Match je povinná.</value>
+  </data>
+  <data name="IcoRequired" xml:space="preserve">
+    <value>IČO je povinné.</value>
+  </data>
+  <data name="IcoTooLong" xml:space="preserve">
+    <value>IČO nesmí překročit 20 znaků.</value>
+  </data>
+  <data name="KrzpIdTooLong" xml:space="preserve">
+    <value>ID KRZP nesmí překročit 50 znaků.</value>
+  </data>
+</root>

@@ -1,0 +1,6 @@
+@ElektronickePosudky.Api_HostAddress = http://localhost:5265
+
+GET {{ElektronickePosudky.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

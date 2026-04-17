@@ -1,0 +1,15 @@
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/bin/Debug/net8.0/ElektronickePosudky.Application.deps.json
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/bin/Debug/net8.0/ElektronickePosudky.Application.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/bin/Debug/net8.0/ElektronickePosudky.Application.pdb
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/bin/Debug/net8.0/ElektronickePosudky.Domain.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/bin/Debug/net8.0/ElektronickePosudky.Domain.pdb
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ElektronickePosudky.Application.csproj.AssemblyReference.cache
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ElektronickePosudky.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ElektronickePosudky.Application.AssemblyInfoInputs.cache
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ElektronickePosudky.Application.AssemblyInfo.cs
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ElektronickePosudky.Application.csproj.CoreCompileInputs.cache
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/Elektron.79429077.Up2Date
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ElektronickePosudky.Application.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/refint/ElektronickePosudky.Application.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ElektronickePosudky.Application.pdb
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ref/ElektronickePosudky.Application.dll

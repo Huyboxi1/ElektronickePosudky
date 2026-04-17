@@ -1,0 +1,2562 @@
+{
+	"info": {
+		"_postman_id": "3d4af8bb-d083-4d29-bb80-0e1111c6a6f2",
+		"name": "ElektronickePosudky.Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39324916"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v2",
+					"item": [
+						{
+							"name": "ciselniky",
+							"item": [
+								{
+									"name": "{kod}",
+									"item": [
+										{
+											"name": "polozky",
+											"item": [
+												{
+													"name": "/api/v2/ciselniky/:kod/polozky",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "X-Correlation-Id",
+																"value": "string"
+															},
+															{
+																"key": "Accept-Language",
+																"value": "string"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/ciselniky/:kod/polozky",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"ciselniky",
+																":kod",
+																"polozky"
+															],
+															"variable": [
+																{
+																	"key": "kod",
+																	"value": "string"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/ciselniky/:kod/polozky",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"ciselniky",
+																		":kod",
+																		"polozky"
+																	],
+																	"variable": [
+																		{
+																			"key": "kod",
+																			"value": "string"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "[\n  {\n    \"id\": \"ef942912-fc76-fa06-ea5c-7515f9f86b87\",\n    \"kod\": \"string\",\n    \"verze\": \"string\",\n    \"rodicId\": \"acfa710a-ff94-c7b9-0878-8cf24c43783d\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  {\n    \"id\": \"8c93e8ea-fdb7-8273-b444-55b7ff0d8df9\",\n    \"kod\": \"string\",\n    \"verze\": \"string\",\n    \"rodicId\": \"af2cccf0-b9e2-a415-fde3-3326566528b9\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  }\n]"
+														},
+														{
+															"name": "Bad Request",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/ciselniky/:kod/polozky",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"ciselniky",
+																		":kod",
+																		"polozky"
+																	],
+																	"variable": [
+																		{
+																			"key": "kod",
+																			"value": "string"
+																		}
+																	]
+																}
+															},
+															"status": "Bad Request",
+															"code": 400,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+														},
+														{
+															"name": "Not Found",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/ciselniky/:kod/polozky",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"ciselniky",
+																		":kod",
+																		"polozky"
+																	],
+																	"variable": [
+																		{
+																			"key": "kod",
+																			"value": "string"
+																		}
+																	]
+																}
+															},
+															"status": "Not Found",
+															"code": 404,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+														},
+														{
+															"name": "Internal Server Error",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/ciselniky/:kod/polozky",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"ciselniky",
+																		":kod",
+																		"polozky"
+																	],
+																	"variable": [
+																		{
+																			"key": "kod",
+																			"value": "string"
+																		}
+																	]
+																}
+															},
+															"status": "Internal Server Error",
+															"code": 500,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/api/v2/ciselniky",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Correlation-Id",
+												"value": "string"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "string"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v2/ciselniky",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v2",
+												"ciselniky"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Correlation-Id",
+														"value": "string"
+													},
+													{
+														"key": "Accept-Language",
+														"value": "string"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/ciselniky",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"ciselniky"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": \"d4c92252-cc91-a526-a97b-a9b00a065164\",\n    \"kod\": \"string\",\n    \"verze\": \"string\",\n    \"platnostOd\": \"1975-04-29T19:41:31.424Z\",\n    \"platnostDo\": \"1964-11-29T18:53:08.179Z\",\n    \"termx\": false,\n    \"termxId\": \"string\",\n    \"termxUrl\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  {\n    \"id\": \"89f5d3b8-3f69-ec25-3cd4-445ad54ef8d7\",\n    \"kod\": \"string\",\n    \"verze\": \"string\",\n    \"platnostOd\": \"1968-04-09T04:10:45.164Z\",\n    \"platnostDo\": \"1971-11-22T10:46:04.262Z\",\n    \"termx\": true,\n    \"termxId\": \"string\",\n    \"termxUrl\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  }\n]"
+										},
+										{
+											"name": "Request Timeout",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Correlation-Id",
+														"value": "string"
+													},
+													{
+														"key": "Accept-Language",
+														"value": "string"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/ciselniky",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"ciselniky"
+													]
+												}
+											},
+											"status": "Request Timeout",
+											"code": 408,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+										},
+										{
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Correlation-Id",
+														"value": "string"
+													},
+													{
+														"key": "Accept-Language",
+														"value": "string"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/ciselniky",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"ciselniky"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "posudky",
+							"item": [
+								{
+									"name": "ridicskeOpravneni",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "historie",
+													"item": [
+														{
+															"name": "/api/v2/posudky/ridicskeOpravneni/:id/historie",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/historie",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		":id",
+																		"historie"
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/historie",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"historie"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "[\n  {\n    \"typOperace\": {\n      \"ciselnikKod\": \"string\",\n      \"ciselnikVerze\": \"string\",\n      \"polozkaKod\": \"string\",\n      \"preklady\": {\n        \"key_0\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        },\n        \"key_1\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        },\n        \"key_2\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        }\n      }\n    },\n    \"datumOperace\": \"1986-05-24T21:05:05.680Z\",\n    \"lekar\": {\n      \"krzpId\": \"string\",\n      \"titulPred\": \"string\",\n      \"jmeno\": \"string\",\n      \"prijmeni\": \"string\",\n      \"titulZa\": \"string\",\n      \"odbornost\": \"string\"\n    },\n    \"poskytovatel\": {\n      \"ico\": \"string\",\n      \"nazev\": \"string\",\n      \"adresa\": \"string\"\n    }\n  },\n  {\n    \"typOperace\": {\n      \"ciselnikKod\": \"string\",\n      \"ciselnikVerze\": \"string\",\n      \"polozkaKod\": \"string\",\n      \"preklady\": {\n        \"key_0\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        },\n        \"key_1\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        },\n        \"key_2\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        }\n      }\n    },\n    \"datumOperace\": \"2015-02-14T21:38:21.019Z\",\n    \"lekar\": {\n      \"krzpId\": \"string\",\n      \"titulPred\": \"string\",\n      \"jmeno\": \"string\",\n      \"prijmeni\": \"string\",\n      \"titulZa\": \"string\",\n      \"odbornost\": \"string\"\n    },\n    \"poskytovatel\": {\n      \"ico\": \"string\",\n      \"nazev\": \"string\",\n      \"adresa\": \"string\"\n    }\n  }\n]"
+																},
+																{
+																	"name": "Bad Request",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/historie",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"historie"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Bad Request",
+																	"code": 400,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Not Found",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/historie",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"historie"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Not Found",
+																	"code": 404,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Internal Server Error",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/historie",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"historie"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Internal Server Error",
+																	"code": 500,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "zneplatnit",
+													"item": [
+														{
+															"name": "/api/v2/posudky/ridicskeOpravneni/:id/zneplatnit",
+															"request": {
+																"method": "PATCH",
+																"header": [
+																	{
+																		"key": "If-Match",
+																		"value": "string"
+																	},
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\",\n  \"duvodZneplatneni\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  }\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/zneplatnit",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		":id",
+																		"zneplatnit"
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "PATCH",
+																		"header": [
+																			{
+																				"key": "If-Match",
+																				"value": "string"
+																			},
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\",\n  \"duvodZneplatneni\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  }\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/zneplatnit",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"zneplatnit"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"id\": \"1e34d775-5d78-7696-129c-1e8505aab21d\",\n  \"pacient\": {\n    \"rid\": \"string\",\n    \"jmeno\": \"string\",\n    \"prijmeni\": \"string\",\n    \"datumNarozeni\": \"1954-11-01T13:10:51.596Z\",\n    \"adresa\": \"string\",\n    \"email\": \"string\",\n    \"doklad\": \"string\",\n    \"pohlavi\": \"string\"\n  },\n  \"zdravotnickyPracovnik\": {\n    \"krzpId\": \"string\",\n    \"titulPred\": \"string\",\n    \"jmeno\": \"string\",\n    \"prijmeni\": \"string\",\n    \"titulZa\": \"string\",\n    \"odbornost\": \"string\"\n  },\n  \"poskytovatelZdravotnickychSluzeb\": {\n    \"ico\": \"string\",\n    \"nazev\": \"string\",\n    \"adresa\": \"string\"\n  },\n  \"odbornostLekare\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"stavPosudku\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_2\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_3\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"druhProhlidky\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_2\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"druhPosudku\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_2\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"vysledek\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"skupinaZadatelRidic\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_2\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"datumVystaveni\": \"1982-09-14T14:06:57.484Z\",\n  \"platnostDo\": \"2005-09-12T11:34:17.402Z\",\n  \"datumVytvoreni\": \"1980-01-09T02:04:37.070Z\",\n  \"skupinyRidicskehoOpravneni\": [\n    {\n      \"skupinaRo\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      }\n    },\n    {\n      \"skupinaRo\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      }\n    }\n  ],\n  \"harmonizovaneKody\": [\n    {\n      \"harmonizovanyKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinaRo\": [\n        {\n          \"ciselnikKod\": \"string\",\n          \"ciselnikVerze\": \"string\",\n          \"polozkaKod\": \"string\",\n          \"preklady\": {\n            \"key_0\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_1\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_2\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_3\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            }\n          }\n        },\n        {\n          \"ciselnikKod\": \"string\",\n          \"ciselnikVerze\": \"string\",\n          \"polozkaKod\": \"string\",\n          \"preklady\": {\n            \"key_0\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_1\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            }\n          }\n        }\n      ],\n      \"upresneniKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"upresneniText\": \"string\"\n    },\n    {\n      \"harmonizovanyKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinaRo\": [\n        {\n          \"ciselnikKod\": \"string\",\n          \"ciselnikVerze\": \"string\",\n          \"polozkaKod\": \"string\",\n          \"preklady\": {\n            \"key_0\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_1\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_2\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_3\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            }\n          }\n        },\n        {\n          \"ciselnikKod\": \"string\",\n          \"ciselnikVerze\": \"string\",\n          \"polozkaKod\": \"string\",\n          \"preklady\": {\n            \"key_0\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_1\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            }\n          }\n        }\n      ],\n      \"upresneniKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"upresneniText\": \"string\"\n    }\n  ],\n  \"narodniKody\": [\n    {\n      \"narodniKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinaRo\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"upresneniText\": \"string\"\n    },\n    {\n      \"narodniKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_3\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinaRo\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"upresneniText\": \"string\"\n    }\n  ],\n  \"verzeZaznamu\": \"string\"\n}"
+																},
+																{
+																	"name": "Bad Request",
+																	"originalRequest": {
+																		"method": "PATCH",
+																		"header": [
+																			{
+																				"key": "If-Match",
+																				"value": "string"
+																			},
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\",\n  \"duvodZneplatneni\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  }\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/zneplatnit",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"zneplatnit"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Bad Request",
+																	"code": 400,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Not Found",
+																	"originalRequest": {
+																		"method": "PATCH",
+																		"header": [
+																			{
+																				"key": "If-Match",
+																				"value": "string"
+																			},
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\",\n  \"duvodZneplatneni\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  }\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/zneplatnit",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"zneplatnit"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Not Found",
+																	"code": 404,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Request Timeout",
+																	"originalRequest": {
+																		"method": "PATCH",
+																		"header": [
+																			{
+																				"key": "If-Match",
+																				"value": "string"
+																			},
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\",\n  \"duvodZneplatneni\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  }\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/zneplatnit",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"zneplatnit"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Request Timeout",
+																	"code": 408,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Conflict",
+																	"originalRequest": {
+																		"method": "PATCH",
+																		"header": [
+																			{
+																				"key": "If-Match",
+																				"value": "string"
+																			},
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\",\n  \"duvodZneplatneni\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  }\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/zneplatnit",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"zneplatnit"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Conflict",
+																	"code": 409,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Precondition Failed",
+																	"originalRequest": {
+																		"method": "PATCH",
+																		"header": [
+																			{
+																				"key": "If-Match",
+																				"value": "string"
+																			},
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\",\n  \"duvodZneplatneni\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  }\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/zneplatnit",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"zneplatnit"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Precondition Failed",
+																	"code": 412,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Internal Server Error",
+																	"originalRequest": {
+																		"method": "PATCH",
+																		"header": [
+																			{
+																				"key": "If-Match",
+																				"value": "string"
+																			},
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\",\n  \"duvodZneplatneni\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  }\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/zneplatnit",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"zneplatnit"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Internal Server Error",
+																	"code": 500,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "pdf",
+													"item": [
+														{
+															"name": "/api/v2/posudky/ridicskeOpravneni/:id/pdf",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/pdf"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/pdf",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		":id",
+																		"pdf"
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/pdf"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/pdf",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"pdf"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/pdf"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "string"
+																},
+																{
+																	"name": "Not Found",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/pdf",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"pdf"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Not Found",
+																	"code": 404,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Request Timeout",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/pdf",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"pdf"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Request Timeout",
+																	"code": 408,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Internal Server Error",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id/pdf",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				":id",
+																				"pdf"
+																			],
+																			"variable": [
+																				{
+																					"key": "id",
+																					"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Internal Server Error",
+																	"code": 500,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "/api/v2/posudky/ridicskeOpravneni/:id",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "X-Correlation-Id",
+																"value": "string"
+															},
+															{
+																"key": "Accept-Language",
+																"value": "string"
+															},
+															{
+																"key": "If-None-Match",
+																"value": "string"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"posudky",
+																"ridicskeOpravneni",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "If-None-Match",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"1e34d775-5d78-7696-129c-1e8505aab21d\",\n  \"pacient\": {\n    \"rid\": \"string\",\n    \"jmeno\": \"string\",\n    \"prijmeni\": \"string\",\n    \"datumNarozeni\": \"1954-11-01T13:10:51.596Z\",\n    \"adresa\": \"string\",\n    \"email\": \"string\",\n    \"doklad\": \"string\",\n    \"pohlavi\": \"string\"\n  },\n  \"zdravotnickyPracovnik\": {\n    \"krzpId\": \"string\",\n    \"titulPred\": \"string\",\n    \"jmeno\": \"string\",\n    \"prijmeni\": \"string\",\n    \"titulZa\": \"string\",\n    \"odbornost\": \"string\"\n  },\n  \"poskytovatelZdravotnickychSluzeb\": {\n    \"ico\": \"string\",\n    \"nazev\": \"string\",\n    \"adresa\": \"string\"\n  },\n  \"odbornostLekare\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"stavPosudku\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_2\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_3\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"druhProhlidky\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_2\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"druhPosudku\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_2\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"vysledek\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"skupinaZadatelRidic\": {\n    \"ciselnikKod\": \"string\",\n    \"ciselnikVerze\": \"string\",\n    \"polozkaKod\": \"string\",\n    \"preklady\": {\n      \"key_0\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_1\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      },\n      \"key_2\": {\n        \"nazev\": \"string\",\n        \"popis\": \"string\"\n      }\n    }\n  },\n  \"datumVystaveni\": \"1982-09-14T14:06:57.484Z\",\n  \"platnostDo\": \"2005-09-12T11:34:17.402Z\",\n  \"datumVytvoreni\": \"1980-01-09T02:04:37.070Z\",\n  \"skupinyRidicskehoOpravneni\": [\n    {\n      \"skupinaRo\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      }\n    },\n    {\n      \"skupinaRo\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      }\n    }\n  ],\n  \"harmonizovaneKody\": [\n    {\n      \"harmonizovanyKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinaRo\": [\n        {\n          \"ciselnikKod\": \"string\",\n          \"ciselnikVerze\": \"string\",\n          \"polozkaKod\": \"string\",\n          \"preklady\": {\n            \"key_0\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_1\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_2\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_3\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            }\n          }\n        },\n        {\n          \"ciselnikKod\": \"string\",\n          \"ciselnikVerze\": \"string\",\n          \"polozkaKod\": \"string\",\n          \"preklady\": {\n            \"key_0\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_1\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            }\n          }\n        }\n      ],\n      \"upresneniKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"upresneniText\": \"string\"\n    },\n    {\n      \"harmonizovanyKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinaRo\": [\n        {\n          \"ciselnikKod\": \"string\",\n          \"ciselnikVerze\": \"string\",\n          \"polozkaKod\": \"string\",\n          \"preklady\": {\n            \"key_0\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_1\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_2\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_3\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            }\n          }\n        },\n        {\n          \"ciselnikKod\": \"string\",\n          \"ciselnikVerze\": \"string\",\n          \"polozkaKod\": \"string\",\n          \"preklady\": {\n            \"key_0\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            },\n            \"key_1\": {\n              \"nazev\": \"string\",\n              \"popis\": \"string\"\n            }\n          }\n        }\n      ],\n      \"upresneniKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"upresneniText\": \"string\"\n    }\n  ],\n  \"narodniKody\": [\n    {\n      \"narodniKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinaRo\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"upresneniText\": \"string\"\n    },\n    {\n      \"narodniKod\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_3\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinaRo\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"upresneniText\": \"string\"\n    }\n  ],\n  \"verzeZaznamu\": \"string\"\n}"
+														},
+														{
+															"name": "Not Modified",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "If-None-Match",
+																		"value": "string"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																		}
+																	]
+																}
+															},
+															"status": "Not Modified",
+															"code": 304,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														},
+														{
+															"name": "Not Found",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "If-None-Match",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "63c8d774-b21c-5e1d-bab1-52a071d92275"
+																		}
+																	]
+																}
+															},
+															"status": "Not Found",
+															"code": 404,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "vyhledat",
+											"item": [
+												{
+													"name": "/api/v2/posudky/ridicskeOpravneni/vyhledat",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "X-Correlation-Id",
+																"value": "string"
+															},
+															{
+																"key": "Accept-Language",
+																"value": "string"
+															},
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"rid\": \"string\",\n  \"datumOd\": \"2002-07-05T07:38:48.078Z\",\n  \"datumDo\": \"2012-03-30T07:24:55.615Z\",\n  \"jenPlatne\": true,\n  \"stavPosudku\": \"de8ef92e-5a21-0b79-c228-7fe77302a216\",\n  \"fulltext\": \"string\",\n  \"ico\": \"string\",\n  \"page\": 1787,\n  \"size\": 7027,\n  \"sort\": \"string\",\n  \"order\": \"string\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/vyhledat",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"posudky",
+																"ridicskeOpravneni",
+																"vyhledat"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"rid\": \"string\",\n  \"datumOd\": \"2002-07-05T07:38:48.078Z\",\n  \"datumDo\": \"2012-03-30T07:24:55.615Z\",\n  \"jenPlatne\": true,\n  \"stavPosudku\": \"de8ef92e-5a21-0b79-c228-7fe77302a216\",\n  \"fulltext\": \"string\",\n  \"ico\": \"string\",\n  \"page\": 1787,\n  \"size\": 7027,\n  \"sort\": \"string\",\n  \"order\": \"string\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/vyhledat",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		"vyhledat"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"page\": [\n    {\n      \"id\": \"d8686322-9498-0aad-5eeb-16b63edad766\",\n      \"pacient\": {\n        \"rid\": \"string\",\n        \"jmeno\": \"string\",\n        \"prijmeni\": \"string\",\n        \"datumNarozeni\": \"1954-03-01T05:15:12.612Z\",\n        \"adresa\": \"string\",\n        \"email\": \"string\",\n        \"doklad\": \"string\",\n        \"pohlavi\": \"string\"\n      },\n      \"zdravotnickyPracovnik\": {\n        \"krzpId\": \"string\",\n        \"titulPred\": \"string\",\n        \"jmeno\": \"string\",\n        \"prijmeni\": \"string\",\n        \"titulZa\": \"string\",\n        \"odbornost\": \"string\"\n      },\n      \"poskytovatelZdravotnickychSluzeb\": {\n        \"ico\": \"string\",\n        \"nazev\": \"string\",\n        \"adresa\": \"string\"\n      },\n      \"odbornostLekare\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"stavPosudku\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"druhProhlidky\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"druhPosudku\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_3\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"vysledek\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_2\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinaZadatelRidic\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"datumVystaveni\": \"1975-07-24T08:18:03.874Z\",\n      \"platnostDo\": \"1985-03-26T05:31:23.889Z\",\n      \"datumVytvoreni\": \"1952-03-09T09:10:59.270Z\",\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          }\n        }\n      ],\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_2\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": [\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_1\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            },\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            }\n          ],\n          \"upresneniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_2\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_3\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": [\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            },\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_1\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            }\n          ],\n          \"upresneniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_2\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"verzeZaznamu\": \"string\"\n    },\n    {\n      \"id\": \"15a19b4c-d7bc-9674-5ed8-f719ea7e6d7a\",\n      \"pacient\": {\n        \"rid\": \"string\",\n        \"jmeno\": \"string\",\n        \"prijmeni\": \"string\",\n        \"datumNarozeni\": \"1981-07-23T03:45:40.465Z\",\n        \"adresa\": \"string\",\n        \"email\": \"string\",\n        \"doklad\": \"string\",\n        \"pohlavi\": \"string\"\n      },\n      \"zdravotnickyPracovnik\": {\n        \"krzpId\": \"string\",\n        \"titulPred\": \"string\",\n        \"jmeno\": \"string\",\n        \"prijmeni\": \"string\",\n        \"titulZa\": \"string\",\n        \"odbornost\": \"string\"\n      },\n      \"poskytovatelZdravotnickychSluzeb\": {\n        \"ico\": \"string\",\n        \"nazev\": \"string\",\n        \"adresa\": \"string\"\n      },\n      \"odbornostLekare\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"stavPosudku\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"druhProhlidky\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"druhPosudku\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"vysledek\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinaZadatelRidic\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          },\n          \"key_1\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"datumVystaveni\": \"1988-03-10T09:07:30.462Z\",\n      \"platnostDo\": \"1987-01-02T11:53:08.569Z\",\n      \"datumVytvoreni\": \"1988-07-26T13:39:20.584Z\",\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_2\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          }\n        }\n      ],\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": [\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_1\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_2\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            },\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            }\n          ],\n          \"upresneniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": [\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            },\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_1\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            }\n          ],\n          \"upresneniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"verzeZaznamu\": \"string\"\n    }\n  ],\n  \"nextPage\": 450,\n  \"totalCount\": 3140,\n  \"pageNumber\": 6134,\n  \"pageSize\": 8643\n}"
+														},
+														{
+															"name": "Bad Request",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"rid\": \"string\",\n  \"datumOd\": \"2002-07-05T07:38:48.078Z\",\n  \"datumDo\": \"2012-03-30T07:24:55.615Z\",\n  \"jenPlatne\": true,\n  \"stavPosudku\": \"de8ef92e-5a21-0b79-c228-7fe77302a216\",\n  \"fulltext\": \"string\",\n  \"ico\": \"string\",\n  \"page\": 1787,\n  \"size\": 7027,\n  \"sort\": \"string\",\n  \"order\": \"string\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/vyhledat",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		"vyhledat"
+																	]
+																}
+															},
+															"status": "Bad Request",
+															"code": 400,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+														},
+														{
+															"name": "Request Timeout",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"rid\": \"string\",\n  \"datumOd\": \"2002-07-05T07:38:48.078Z\",\n  \"datumDo\": \"2012-03-30T07:24:55.615Z\",\n  \"jenPlatne\": true,\n  \"stavPosudku\": \"de8ef92e-5a21-0b79-c228-7fe77302a216\",\n  \"fulltext\": \"string\",\n  \"ico\": \"string\",\n  \"page\": 1787,\n  \"size\": 7027,\n  \"sort\": \"string\",\n  \"order\": \"string\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/vyhledat",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		"vyhledat"
+																	]
+																}
+															},
+															"status": "Request Timeout",
+															"code": 408,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+														},
+														{
+															"name": "Internal Server Error",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"rid\": \"string\",\n  \"datumOd\": \"2002-07-05T07:38:48.078Z\",\n  \"datumDo\": \"2012-03-30T07:24:55.615Z\",\n  \"jenPlatne\": true,\n  \"stavPosudku\": \"de8ef92e-5a21-0b79-c228-7fe77302a216\",\n  \"fulltext\": \"string\",\n  \"ico\": \"string\",\n  \"page\": 1787,\n  \"size\": 7027,\n  \"sort\": \"string\",\n  \"order\": \"string\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/vyhledat",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		"vyhledat"
+																	]
+																}
+															},
+															"status": "Internal Server Error",
+															"code": 500,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "zalozeni",
+											"item": [
+												{
+													"name": "opravneni",
+													"item": [
+														{
+															"name": "/api/v2/posudky/ridicskeOpravneni/zalozeni/opravneni",
+															"request": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "X-Correlation-Id",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Accept-Language",
+																		"value": "string"
+																	},
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/zalozeni/opravneni",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v2",
+																		"posudky",
+																		"ridicskeOpravneni",
+																		"zalozeni",
+																		"opravneni"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/zalozeni/opravneni",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				"zalozeni",
+																				"opravneni"
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"opravneni\": false\n}"
+																},
+																{
+																	"name": "Bad Request",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/zalozeni/opravneni",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				"zalozeni",
+																				"opravneni"
+																			]
+																		}
+																	},
+																	"status": "Bad Request",
+																	"code": 400,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Request Timeout",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/zalozeni/opravneni",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				"zalozeni",
+																				"opravneni"
+																			]
+																		}
+																	},
+																	"status": "Request Timeout",
+																	"code": 408,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																},
+																{
+																	"name": "Internal Server Error",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "X-Correlation-Id",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Accept-Language",
+																				"value": "string"
+																			},
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "text/plain"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"krzpId\": \"string\",\n  \"ico\": \"string\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni/zalozeni/opravneni",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"posudky",
+																				"ridicskeOpravneni",
+																				"zalozeni",
+																				"opravneni"
+																			]
+																		}
+																	},
+																	"status": "Internal Server Error",
+																	"code": 500,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "/api/v2/posudky/ridicskeOpravneni",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Correlation-Id",
+														"value": "string"
+													},
+													{
+														"key": "Accept-Language",
+														"value": "string"
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"rid\": \"string\",\n  \"krzpId\": \"string\",\n  \"typAkce\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"stavPosudku\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"druhProhlidky\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"druhPosudku\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"datumVystaveni\": \"1973-11-20T19:50:16.161Z\",\n  \"platnostDo\": \"1948-09-21T18:14:33.285Z\",\n  \"opakovanyPosudekId\": \"e6fcfcb0-998e-9704-7bd0-3317b6f99808\",\n  \"zpusobilosti\": [\n    {\n      \"skupinaZadateleRidic\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        }\n      ]\n    },\n    {\n      \"skupinaZadateleRidic\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"posudky",
+														"ridicskeOpravneni"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "X-Correlation-Id",
+																"value": "string"
+															},
+															{
+																"key": "Accept-Language",
+																"value": "string"
+															},
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"rid\": \"string\",\n  \"krzpId\": \"string\",\n  \"typAkce\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"stavPosudku\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"druhProhlidky\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"druhPosudku\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"datumVystaveni\": \"1973-11-20T19:50:16.161Z\",\n  \"platnostDo\": \"1948-09-21T18:14:33.285Z\",\n  \"opakovanyPosudekId\": \"e6fcfcb0-998e-9704-7bd0-3317b6f99808\",\n  \"zpusobilosti\": [\n    {\n      \"skupinaZadateleRidic\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        }\n      ]\n    },\n    {\n      \"skupinaZadateleRidic\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"posudky",
+																"ridicskeOpravneni"
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"f07eb2b1-c2b2-e24d-e27b-fb9e1f865640\",\n  \"hlavicka\": {\n    \"pacient\": {\n      \"rid\": \"string\",\n      \"jmeno\": \"string\",\n      \"prijmeni\": \"string\",\n      \"datumNarozeni\": \"1993-12-01T18:34:58.997Z\",\n      \"adresa\": \"string\",\n      \"email\": \"string\",\n      \"doklad\": \"string\",\n      \"pohlavi\": \"string\"\n    },\n    \"zdravotnickyPracovnik\": {\n      \"krzpId\": \"string\",\n      \"titulPred\": \"string\",\n      \"jmeno\": \"string\",\n      \"prijmeni\": \"string\",\n      \"titulZa\": \"string\",\n      \"odbornost\": \"string\"\n    },\n    \"poskytovatelZdravotnickychSluzeb\": {\n      \"ico\": \"string\",\n      \"nazev\": \"string\",\n      \"adresa\": \"string\"\n    },\n    \"odbornostLekare\": {\n      \"ciselnikKod\": \"string\",\n      \"ciselnikVerze\": \"string\",\n      \"polozkaKod\": \"string\",\n      \"preklady\": {\n        \"key_0\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        }\n      }\n    },\n    \"stavPosudku\": {\n      \"ciselnikKod\": \"string\",\n      \"ciselnikVerze\": \"string\",\n      \"polozkaKod\": \"string\",\n      \"preklady\": {\n        \"key_0\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        },\n        \"key_1\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        },\n        \"key_2\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        }\n      }\n    },\n    \"druhProhlidky\": {\n      \"ciselnikKod\": \"string\",\n      \"ciselnikVerze\": \"string\",\n      \"polozkaKod\": \"string\",\n      \"preklady\": {\n        \"key_0\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        },\n        \"key_1\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        }\n      }\n    },\n    \"druhPosudku\": {\n      \"ciselnikKod\": \"string\",\n      \"ciselnikVerze\": \"string\",\n      \"polozkaKod\": \"string\",\n      \"preklady\": {\n        \"key_0\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        },\n        \"key_1\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        },\n        \"key_2\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        },\n        \"key_3\": {\n          \"nazev\": \"string\",\n          \"popis\": \"string\"\n        }\n      }\n    },\n    \"datumVystaveni\": \"1958-06-14T18:42:32.800Z\",\n    \"platnostDo\": \"1964-04-15T19:25:53.495Z\",\n    \"datumVytvoreni\": \"2000-11-25T10:34:32.761Z\"\n  },\n  \"zpusobilosti\": [\n    {\n      \"posudekId\": \"3414a99c-1d74-4f85-0531-a435bc4add6e\",\n      \"skupinaZadateleRidic\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": [\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_1\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            },\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            }\n          ],\n          \"upresneniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": [\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_1\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_2\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_3\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_4\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            },\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_1\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            }\n          ],\n          \"upresneniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_2\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"verzeZaznamu\": \"string\"\n    },\n    {\n      \"posudekId\": \"fbf23362-6ce1-bd4e-27cd-65fe7dc94346\",\n      \"skupinaZadateleRidic\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"ciselnikKod\": \"string\",\n        \"ciselnikVerze\": \"string\",\n        \"polozkaKod\": \"string\",\n        \"preklady\": {\n          \"key_0\": {\n            \"nazev\": \"string\",\n            \"popis\": \"string\"\n          }\n        }\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": [\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_1\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            },\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            }\n          ],\n          \"upresneniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_2\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_3\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": [\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            },\n            {\n              \"ciselnikKod\": \"string\",\n              \"ciselnikVerze\": \"string\",\n              \"polozkaKod\": \"string\",\n              \"preklady\": {\n                \"key_0\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                },\n                \"key_1\": {\n                  \"nazev\": \"string\",\n                  \"popis\": \"string\"\n                }\n              }\n            }\n          ],\n          \"upresneniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_2\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"skupinaRo\": {\n            \"ciselnikKod\": \"string\",\n            \"ciselnikVerze\": \"string\",\n            \"polozkaKod\": \"string\",\n            \"preklady\": {\n              \"key_0\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              },\n              \"key_1\": {\n                \"nazev\": \"string\",\n                \"popis\": \"string\"\n              }\n            }\n          },\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"verzeZaznamu\": \"string\"\n    }\n  ]\n}"
+												},
+												{
+													"name": "Bad Request",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "X-Correlation-Id",
+																"value": "string"
+															},
+															{
+																"key": "Accept-Language",
+																"value": "string"
+															},
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"rid\": \"string\",\n  \"krzpId\": \"string\",\n  \"typAkce\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"stavPosudku\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"druhProhlidky\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"druhPosudku\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"datumVystaveni\": \"1973-11-20T19:50:16.161Z\",\n  \"platnostDo\": \"1948-09-21T18:14:33.285Z\",\n  \"opakovanyPosudekId\": \"e6fcfcb0-998e-9704-7bd0-3317b6f99808\",\n  \"zpusobilosti\": [\n    {\n      \"skupinaZadateleRidic\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        }\n      ]\n    },\n    {\n      \"skupinaZadateleRidic\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"posudky",
+																"ridicskeOpravneni"
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+												},
+												{
+													"name": "Request Timeout",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "X-Correlation-Id",
+																"value": "string"
+															},
+															{
+																"key": "Accept-Language",
+																"value": "string"
+															},
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"rid\": \"string\",\n  \"krzpId\": \"string\",\n  \"typAkce\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"stavPosudku\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"druhProhlidky\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"druhPosudku\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"datumVystaveni\": \"1973-11-20T19:50:16.161Z\",\n  \"platnostDo\": \"1948-09-21T18:14:33.285Z\",\n  \"opakovanyPosudekId\": \"e6fcfcb0-998e-9704-7bd0-3317b6f99808\",\n  \"zpusobilosti\": [\n    {\n      \"skupinaZadateleRidic\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        }\n      ]\n    },\n    {\n      \"skupinaZadateleRidic\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"posudky",
+																"ridicskeOpravneni"
+															]
+														}
+													},
+													"status": "Request Timeout",
+													"code": 408,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+												},
+												{
+													"name": "Internal Server Error",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "X-Correlation-Id",
+																"value": "string"
+															},
+															{
+																"key": "Accept-Language",
+																"value": "string"
+															},
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"rid\": \"string\",\n  \"krzpId\": \"string\",\n  \"typAkce\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"stavPosudku\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"druhProhlidky\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"druhPosudku\": {\n    \"kod\": \"string\",\n    \"verze\": \"string\"\n  },\n  \"datumVystaveni\": \"1973-11-20T19:50:16.161Z\",\n  \"platnostDo\": \"1948-09-21T18:14:33.285Z\",\n  \"opakovanyPosudekId\": \"e6fcfcb0-998e-9704-7bd0-3317b6f99808\",\n  \"zpusobilosti\": [\n    {\n      \"skupinaZadateleRidic\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        }\n      ]\n    },\n    {\n      \"skupinaZadateleRidic\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"skupinyRidicskehoOpravneni\": [\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        },\n        {\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          }\n        }\n      ],\n      \"vysledek\": {\n        \"kod\": \"string\",\n        \"verze\": \"string\"\n      },\n      \"harmonizovaneKody\": [\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"harmonizovanyKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": [\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            },\n            {\n              \"kod\": \"string\",\n              \"verze\": \"string\"\n            }\n          ],\n          \"upresneniText\": \"string\"\n        }\n      ],\n      \"narodniKody\": [\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        },\n        {\n          \"narodniKod\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"skupinaRo\": {\n            \"kod\": \"string\",\n            \"verze\": \"string\"\n          },\n          \"upresneniText\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/posudky/ridicskeOpravneni",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"posudky",
+																"ridicskeOpravneni"
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 8387,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"correlationId\": \"string\"\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}

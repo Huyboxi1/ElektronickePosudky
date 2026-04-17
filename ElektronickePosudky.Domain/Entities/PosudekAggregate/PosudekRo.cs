@@ -1,0 +1,96 @@
+using ElektronickePosudky.Domain.ValueObjects;
+
+namespace ElektronickePosudky.Domain.Entities.PosudekAggregate;
+
+public class PosudekHlavicka
+{
+    public PacientVO Pacient { get; private set; } = null!;
+    public ZdravotnickyPracovnikVO ZdravotnickyPracovnik { get; private set; } = null!;
+    public PoskytovatelVO PoskytovatelZdravotnickychSluzeb { get; private set; } = null!;
+
+    public CiselnikPolozkaReference OdbornostLekare { get; private set; } = null!;
+    public CiselnikPolozkaReference StavPosudku { get; private set; } = null!;
+    public CiselnikPolozkaReference DruhProhlidky { get; private set; } = null!;
+    public CiselnikPolozkaReference DruhPosudku { get; private set; } = null!;
+
+    public DateTime DatumVystaveni { get; private set; }
+    public DateTime? PlatnostDo { get; private set; }
+    public DateTime DatumVytvoreni { get; private set; }
+    public string VerzeZaznamu { get; private set; } = string.Empty;
+
+    private PosudekHlavicka()
+    {
+    }
+    public PosudekHlavicka(
+        PacientVO pacient,
+        ZdravotnickyPracovnikVO zdravotnickyPracovnik,
+        PoskytovatelVO poskytovatelZdravotnickychSluzeb,
+        CiselnikPolozkaReference odbornostLekare,
+        CiselnikPolozkaReference stavPosudku,
+        CiselnikPolozkaReference druhProhlidky,
+        CiselnikPolozkaReference druhPosudku,
+        DateTime datumVystaveni,
+        DateTime? platnostDo = null)
+    {
+        Pacient = pacient;
+        ZdravotnickyPracovnik = zdravotnickyPracovnik;
+        PoskytovatelZdravotnickychSluzeb = poskytovatelZdravotnickychSluzeb;
+        OdbornostLekare = odbornostLekare;
+        StavPosudku = stavPosudku;
+        DruhProhlidky = druhProhlidky;
+        DruhPosudku = druhPosudku;
+        DatumVystaveni = datumVystaveni;
+        PlatnostDo = platnostDo;
+        DatumVytvoreni = DateTime.UtcNow;
+        VerzeZaznamu = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+    }
+}
+
+public class PosudekRo
+{
+    public Guid Id { get; private set; }
+
+    public PosudekHlavicka Hlavicka { get; private set; } = null!;
+
+    private readonly List<PosudekZpusobilost> _zpusobilosti = [];
+    public IReadOnlyCollection<PosudekZpusobilost> Zpusobilosti => _zpusobilosti.AsReadOnly();
+
+    private readonly List<PosudekHistorie> _historie = [];
+    public IReadOnlyCollection<PosudekHistorie> Historie => _historie.AsReadOnly();
+
+    protected PosudekRo() { }
+
+    public PosudekRo(PosudekHlavicka hlavicka)
+    {
+        Id = Guid.NewGuid();
+        Hlavicka = hlavicka;
+    }
+
+    public void AddZpusobilost(PosudekZpusobilost zpusobilost)
+    {
+        zpusobilost.SetPosudekId(Id);
+        _zpusobilosti.Add(zpusobilost);
+    }
+
+    public void AddHistoryRecord(PosudekHistorie historyRecord)
+    {
+        historyRecord.SetPosudekId(Id);
+        _historie.Add(historyRecord);
+    }
+
+    public void Zneplatnit(CiselnikPolozkaReference newStav)
+    {
+        var novaHlavicka = new PosudekHlavicka(
+            Hlavicka.Pacient,
+            Hlavicka.ZdravotnickyPracovnik,
+            Hlavicka.PoskytovatelZdravotnickychSluzeb,
+            Hlavicka.OdbornostLekare,
+            newStav,  // Update the state
+            Hlavicka.DruhProhlidky,
+            Hlavicka.DruhPosudku,
+            Hlavicka.DatumVystaveni,
+            Hlavicka.PlatnostDo
+        );
+        Hlavicka = novaHlavicka;
+    }
+}

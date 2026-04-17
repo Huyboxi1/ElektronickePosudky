@@ -1,0 +1,214 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Infrastructure/ElektronickePosudky.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/ElektronickePosudky.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/ElektronickePosudky.Application.csproj",
+        "projectName": "ElektronickePosudky.Application",
+        "projectPath": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/ElektronickePosudky.Application.csproj",
+        "packagesPath": "/Users/huydv/.nuget/packages/",
+        "outputPath": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/huydv/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/ElektronickePosudky.Domain.csproj": {
+                "projectPath": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/ElektronickePosudky.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[16.1.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[14.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.419/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/ElektronickePosudky.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/ElektronickePosudky.Domain.csproj",
+        "projectName": "ElektronickePosudky.Domain",
+        "projectPath": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/ElektronickePosudky.Domain.csproj",
+        "packagesPath": "/Users/huydv/.nuget/packages/",
+        "outputPath": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/huydv/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.419/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Infrastructure/ElektronickePosudky.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Infrastructure/ElektronickePosudky.Infrastructure.csproj",
+        "projectName": "ElektronickePosudky.Infrastructure",
+        "projectPath": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Infrastructure/ElektronickePosudky.Infrastructure.csproj",
+        "packagesPath": "/Users/huydv/.nuget/packages/",
+        "outputPath": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/huydv/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/ElektronickePosudky.Application.csproj": {
+                "projectPath": "/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/ElektronickePosudky.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2026.2.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.419/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    platform: linux/amd64
+    container_name: elektronickeposudky-db
+    env_file:
+      - .env
+    environment:
+      ACCEPT_EULA: "${ACCEPT_EULA:-Y}"
+      SA_PASSWORD: "${SA_PASSWORD}"
+      MSSQL_PID: "${MSSQL_PID:-Developer}"
+    ports:
+      - "${DB_PORT:-1433}:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P ${SA_PASSWORD} -C -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    networks:
+      - elektronickeposudky-network
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: elektronickeposudky-api
+    env_file:
+      - .env
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=${DB_NAME:-ElektronickePosudkyDb};User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True;Encrypt=false;"
+    ports:
+      - "${API_PORT}:80"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    volumes:
+      - ./Logs:/app/Logs
+    networks:
+      - elektronickeposudky-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/swagger/index.html"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  sqlserver_data:
+    driver: local
+
+networks:
+  elektronickeposudky-network:
+    driver: bridge
