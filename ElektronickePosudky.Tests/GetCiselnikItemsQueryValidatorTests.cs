@@ -42,23 +42,6 @@ public class GetCiselnikItemsQueryValidatorTests
             .Which.ErrorMessage.Should().Be("CodebookKodRequired");
     }
 
-    [Theory]
-    [InlineData("12345")]
-    [InlineData("12345678901")]
-    public void Handle_InvalidLengthKod_ShouldHaveLengthError(string invalidKod)
-    {
-
-        var query = new GetCiselnikItemsQuery(invalidKod, "corr-123");
-
-
-        var result = _validator.Validate(query);
-
-
-        result.IsValid.Should().BeFalse();
-
-        result.Errors.Should().Contain(e => e.ErrorMessage == "CodebookKodInvalidLength")
-            .And.HaveCount(1);
-    }
 
     [Fact]
     public void Handle_WhitespaceKod_ShouldBeInvalid()

@@ -4,6 +4,10 @@ using ElektronickePosudky.Application.Repositories;
 using ElektronickePosudky.Domain.ValueObjects;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ElektronickePosudky.Application.Features.Posudky.Commands;
 
@@ -38,8 +42,7 @@ public class InvalidatePosudekCommandHandler : IRequestHandler<InvalidatePosudek
             return null!;
         }
 
-        // CONCURRENCY CHECK
-        var currentETag = $"\"{posudek.Hlavicka.VerzeZaznamu}\"";
+        var currentETag = posudek.Hlavicka.VerzeZaznamu;
         if (request.IfMatch != currentETag)
         {
             _logger.LogWarning("Concurrency Conflict for Posudek ID: {PosudekId}. Current ETag: {CurrentETag}, Requested ETag: {RequestETag}. CorrelationId: {CorrelationId}",
@@ -48,7 +51,7 @@ public class InvalidatePosudekCommandHandler : IRequestHandler<InvalidatePosudek
             throw new InvalidOperationException("ConcurrencyConflict");
         }
 
-        if (posudek.Hlavicka.StavPosudku.PolozkaKod == "ZNEPLATNENY")
+        if (posudek.Hlavicka.StavPosudku.PolozkaKod == "stav_posudku_3")
         {
             _logger.LogWarning("State Conflict for Posudek ID: {PosudekId}. Opinion is already invalidated. CorrelationId: {CorrelationId}",
                 request.Id, request.CorrelationId);
@@ -60,10 +63,13 @@ public class InvalidatePosudekCommandHandler : IRequestHandler<InvalidatePosudek
         try
         {
             var invalidatedState = new CiselnikPolozkaReference(
-                "ZNEPLATNENY",
-                "1.0",
-                "ZNEPLATNENY",
-                new Dictionary<string, TranslationVO> { { "cs", new TranslationVO("Zneplatněný", "Zneplatněný") } }
+                "stav_posudku_3",
+                "1.0.0",
+                "stav-posudku",
+                new Dictionary<string, TranslationVO>
+                {
+                    { "cs", new TranslationVO("zneplatněný", "Zneplatněný") }
+                }
             );
 
             posudek.Zneplatnit(invalidatedState);

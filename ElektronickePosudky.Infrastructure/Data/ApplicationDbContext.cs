@@ -20,5 +20,9 @@ public class ApplicationDbContext : DbContext
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+
+        modelBuilder.Entity<Ciselnik>().HasData(CiselnikSeeder.GetCiselniky());
+
+        modelBuilder.Entity<CiselnikPolozka>().HasData(CiselnikSeeder.GetCiselnikPolozky());
     }
 }

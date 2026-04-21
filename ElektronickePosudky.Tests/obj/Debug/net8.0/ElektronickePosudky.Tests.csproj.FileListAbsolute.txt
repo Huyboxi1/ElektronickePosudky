@@ -524,3 +524,6 @@
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Tests/obj/Debug/net8.0/ref/ElektronickePosudky.Tests.dll
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Tests/bin/Debug/net8.0/appsettings.Testing.json
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Tests/bin/Debug/net8.0/Logs/log-20260407.json
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Tests/obj/Debug/net8.0/ElektronickePosudky.Tests.sourcelink.json
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Tests/bin/Debug/net8.0/Logs/log-20260421.json
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Tests/bin/Debug/net8.0/Logs/log-20260422.json

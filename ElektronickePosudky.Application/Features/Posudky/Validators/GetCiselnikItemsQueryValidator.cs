@@ -10,7 +10,6 @@ public class GetCiselnikItemsQueryValidator : AbstractValidator<GetCiselnikItems
         RuleLevelCascadeMode = CascadeMode.Stop;
 
         RuleFor(x => x.Kod)
-            .NotEmpty().WithMessage("CodebookKodRequired")
-            .Length(10).WithMessage("CodebookKodInvalidLength");
+            .NotEmpty().WithMessage("CodebookKodRequired");
     }
 }

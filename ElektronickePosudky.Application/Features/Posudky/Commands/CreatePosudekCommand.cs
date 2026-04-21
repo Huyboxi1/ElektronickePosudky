@@ -56,16 +56,17 @@ public class CreatePosudekCommandHandler : IRequestHandler<CreatePosudekCommand,
             );
 
             var hlavicka = new PosudekHlavicka(
-                pacient,
-                zdravotnickyPracovnik,
-                poskytovatel,
-                odbornostLekare,
-                MapToReference(dto.StavPosudku),
-                MapToReference(dto.DruhProhlidky),
-                MapToReference(dto.DruhPosudku),
-                dto.DatumVystaveni,
-                dto.PlatnostDo
-            );
+            pacient,
+            zdravotnickyPracovnik,
+            poskytovatel,
+            odbornostLekare,
+            MapToReference("akce-ro", dto.TypAkceKod ?? "akce_ro_1"),
+            MapToReference("stav-posudku", dto.StavPosudkuKod),
+            MapToReference("druh-prohlidky-ro", dto.DruhProhlidkyKod),
+            MapToReference("druh-posudku-ro", dto.DruhPosudkuKod),
+            dto.DatumVystaveni,
+            dto.PlatnostDo
+        );
 
             var posudek = new PosudekRo(hlavicka);
 
@@ -74,16 +75,16 @@ public class CreatePosudekCommandHandler : IRequestHandler<CreatePosudekCommand,
                 foreach (var zpusobilostDto in dto.Zpusobilosti)
                 {
                     var zpusobilost = new PosudekZpusobilost(
-                        MapToReference(zpusobilostDto.SkupinaZadateleRidic),
-                        MapToReference(zpusobilostDto.Vysledek)
+                        MapToReference("skupina-zadatel-ridic-ro", zpusobilostDto.SkupinaZadateleRidicKod),
+                        MapToReference("vysledek-posudku-ro", zpusobilostDto.VysledekKod)
                     );
 
-                    if (zpusobilostDto.SkupinyRidicskehoOpravneni != null)
+                    if (zpusobilostDto.SkupinyRidicskehoOpravneniKody != null)
                     {
-                        foreach (var skupinaDto in zpusobilostDto.SkupinyRidicskehoOpravneni)
+                        foreach (var skupinaKod in zpusobilostDto.SkupinyRidicskehoOpravneniKody)
                         {
                             var skupina = new PosudekSkupinaRo(
-                                MapToReference(skupinaDto.SkupinaRo)
+                                MapToReference("seznam-skupin-ro", skupinaKod)
                             );
                             zpusobilost.AddSkupinaRidicskehoOpravneni(skupina);
                         }
@@ -94,16 +95,16 @@ public class CreatePosudekCommandHandler : IRequestHandler<CreatePosudekCommand,
                         foreach (var harmKodDto in zpusobilostDto.HarmonizovaneKody)
                         {
                             var harmKod = new PosudekHarmonizovanyKod(
-                                MapToReference(harmKodDto.HarmonizovanyKod),
+                                MapToReference("seznam-harmonizovane-kody-ro", harmKodDto.HarmonizovanyKod),
                                 null,
                                 harmKodDto.UpresneniText
                             );
 
-                            if (harmKodDto.SkupinaRo != null)
+                            if (harmKodDto.SkupinaRoKody != null)
                             {
-                                foreach (var skupinaRoDto in harmKodDto.SkupinaRo)
+                                foreach (var skupinaRoKod in harmKodDto.SkupinaRoKody)
                                 {
-                                    harmKod.AddSkupinaRo(MapToReference(skupinaRoDto));
+                                    harmKod.AddSkupinaRo(MapToReference("seznam-skupin-ro", skupinaRoKod));
                                 }
                             }
 
@@ -116,8 +117,8 @@ public class CreatePosudekCommandHandler : IRequestHandler<CreatePosudekCommand,
                         foreach (var natKodDto in zpusobilostDto.NarodniKody)
                         {
                             var natKod = new PosudekNarodniKod(
-                                MapToReference(natKodDto.NarodniKod),
-                                MapToReference(natKodDto.SkupinaRo),
+                                MapToReference("seznam-narodni-kody-ro", natKodDto.NarodniKod),
+                                MapToReference("seznam-skupin-ro", natKodDto.SkupinaRoKod),
                                 natKodDto.UpresneniText
                             );
                             zpusobilost.AddNarodniKod(natKod);
@@ -159,18 +160,13 @@ public class CreatePosudekCommandHandler : IRequestHandler<CreatePosudekCommand,
         }
     }
 
-    private CiselnikPolozkaReference MapToReference(CodebookItemDto dto)
+    private CiselnikPolozkaReference MapToReference(string ciselnikKod, string polozkaKod)
     {
         return new CiselnikPolozkaReference(
-            dto.Kod,
-            dto.Verze,
-            dto.Kod,
-            new Dictionary<string, TranslationVO> { { "cs", new TranslationVO(dto.Kod, dto.Verze) } }
+            ciselnikKod,
+            "1.0.0",
+            polozkaKod,
+            new Dictionary<string, TranslationVO> { { "cs", new TranslationVO(polozkaKod, "") } }
         );
-    }
-
-    private CodebookItemDto CreateEmptyReference()
-    {
-        return new CodebookItemDto { Kod = string.Empty, Verze = string.Empty };
     }
 }

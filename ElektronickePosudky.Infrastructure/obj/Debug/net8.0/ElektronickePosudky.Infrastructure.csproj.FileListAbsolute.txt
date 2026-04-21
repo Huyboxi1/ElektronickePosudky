@@ -34,3 +34,4 @@
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Infrastructure/obj/Debug/net8.0/refint/ElektronickePosudky.Infrastructure.dll
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Infrastructure/obj/Debug/net8.0/ElektronickePosudky.Infrastructure.pdb
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Infrastructure/obj/Debug/net8.0/ref/ElektronickePosudky.Infrastructure.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Infrastructure/obj/Debug/net8.0/ElektronickePosudky.Infrastructure.sourcelink.json

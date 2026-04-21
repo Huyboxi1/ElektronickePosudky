@@ -226,3 +226,6 @@
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Api/obj/Debug/net8.0/ElektronickePosudky.Api.Resources.SharedResource.cs.resources
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Api/obj/Debug/net8.0/cs/ElektronickePosudky.Api.resources.cs
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Api/obj/Debug/net8.0/cs/ElektronickePosudky.Api.resources.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Api/obj/Debug/net8.0/ElektronickePosudky.Api.sourcelink.json
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Api/bin/Debug/net8.0/Logs/log-20260421.json
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Api/bin/Debug/net8.0/Logs/log-20260422.json

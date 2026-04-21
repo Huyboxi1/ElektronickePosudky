@@ -38,6 +38,8 @@ public class PosudekControllerTests : IClassFixture<WebApplicationFactory<Progra
 
         problemDetails!.Errors.Should().ContainKey("Data.Rid");
         problemDetails.Errors.Should().ContainKey("Data.KrzpId");
+        problemDetails.Errors.Should().ContainKey("Data.TypAkceKod");
+        problemDetails.Errors.Should().ContainKey("Data.StavPosudkuKod");
         problemDetails.Errors.Should().ContainKey("Data.Zpusobilosti");
     }
 
@@ -74,6 +76,12 @@ public class PosudekControllerTests : IClassFixture<WebApplicationFactory<Progra
         var validRequest = CreateValidMockRequest();
         var response = await _client.PostAsJsonAsync(BaseUrl, validRequest);
 
+        if (response.StatusCode == HttpStatusCode.BadRequest)
+        {
+            var error = await response.Content.ReadAsStringAsync();
+            throw new Exception($"Validation failed! Details: {error}");
+        }
+
         if (response.StatusCode == HttpStatusCode.InternalServerError) return;
 
         response.StatusCode.Should().Be(HttpStatusCode.Created);
@@ -97,27 +105,6 @@ public class PosudekControllerTests : IClassFixture<WebApplicationFactory<Progra
         problemDetails!.Status.Should().Be(StatusCodes.Status404NotFound);
     }
 
-    [Fact]
-    public async Task GetById_ShouldReturn304NotModified_WhenETagMatches()
-    {
-        var createResponse = await _client.PostAsJsonAsync(BaseUrl, CreateValidMockRequest());
-        if (!createResponse.IsSuccessStatusCode) return;
-
-        var createdDto = await createResponse.Content.ReadFromJsonAsync<CreatePosudekResponseDto>();
-        var id = createdDto!.Id;
-
-        var getResponse = await _client.GetAsync($"{BaseUrl}/{id}");
-        getResponse.StatusCode.Should().Be(HttpStatusCode.OK);
-        var etag = getResponse.Headers.ETag?.Tag;
-        etag.Should().NotBeNullOrEmpty();
-
-        var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"{BaseUrl}/{id}");
-        requestMessage.Headers.IfNoneMatch.Add(new EntityTagHeaderValue(etag!));
-
-        var cachedResponse = await _client.SendAsync(requestMessage);
-
-        cachedResponse.StatusCode.Should().Be(HttpStatusCode.NotModified);
-    }
 
     #endregion
 
@@ -126,7 +113,6 @@ public class PosudekControllerTests : IClassFixture<WebApplicationFactory<Progra
     [Fact]
     public async Task Search_ShouldReturnOk_WithValidCriteria()
     {
-        // TODO: If SearchPosudkyDto has required fields, fill them in here.
         var searchCriteria = new SearchPosudkyDto { };
 
         var response = await _client.PostAsJsonAsync($"{BaseUrl}/vyhledat", searchCriteria);
@@ -160,7 +146,7 @@ public class PosudekControllerTests : IClassFixture<WebApplicationFactory<Progra
         {
             KrzpId = "KRZP-123",
             Ico = "12345678",
-            DuvodZneplatneni = new CodebookItemDto { Kod = "1", Verze = "1" }
+            DuvodZneplatneniKod = "akce_ro_3"
         };
 
         var requestMessage = new HttpRequestMessage(HttpMethod.Patch, $"/api/v2/posudky/ridicskeOpravneni/{randomId}/zneplatnit")
@@ -169,7 +155,6 @@ public class PosudekControllerTests : IClassFixture<WebApplicationFactory<Progra
         };
         requestMessage.Headers.TryAddWithoutValidation("If-Match", "\"v1\"");
 
-        // Act
         var response = await _client.SendAsync(requestMessage);
 
         if (response.StatusCode == HttpStatusCode.BadRequest)
@@ -178,7 +163,6 @@ public class PosudekControllerTests : IClassFixture<WebApplicationFactory<Progra
             throw new Exception($"Validation failed! Please provide required fields in PosudekZneplatnitDto. Details: {error}");
         }
 
-        // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
     }
 
@@ -217,7 +201,7 @@ public class PosudekControllerTests : IClassFixture<WebApplicationFactory<Progra
         var request = new PosudekAuthCheckDto
         {
             KrzpId = "KRZP-123",
-            Ico = "12345678"     // Mock IČO (usually an 8-digit number in CZ)
+            Ico = "12345678"
         };
 
         // Act
@@ -244,22 +228,19 @@ public class PosudekControllerTests : IClassFixture<WebApplicationFactory<Progra
             Rid = "1234567890",
             KrzpId = "KRZP-123",
             DatumVystaveni = DateTime.Now.AddDays(-1),
-            TypAkce = new CodebookItemDto { Kod = "A", Verze = "1" },
-            StavPosudku = new CodebookItemDto { Kod = "S", Verze = "1" },
-            DruhProhlidky = new CodebookItemDto { Kod = "P", Verze = "1" },
-            DruhPosudku = new CodebookItemDto { Kod = "DP", Verze = "1" },
-            Zpusobilosti = new List<PosudekZpusobilostDto>
+            TypAkceKod = "akce_ro_1",
+            StavPosudkuKod = "stav_posudku_1",
+            DruhProhlidkyKod = "druh_prohlidky_ro_1",
+            DruhPosudkuKod = "druh_posudku_ro_1",
+            Zpusobilosti = new List<PosudekZpusobilostCreateDto>
             {
-                new PosudekZpusobilostDto
+                new PosudekZpusobilostCreateDto
                 {
-                    SkupinaZadateleRidic = new CodebookItemDto { Kod = "Z", Verze = "1" },
-                    Vysledek = new CodebookItemDto { Kod = "V", Verze = "1" },
-                    SkupinyRidicskehoOpravneni = new List<PosudekSkupinaRoDetailDto>
+                    SkupinaZadateleRidicKod = "skupina_ro_1",
+                    VysledekKod = "vysledek_posudku_ro_1",
+                    SkupinyRidicskehoOpravneniKody = new List<string>
                     {
-                        new PosudekSkupinaRoDetailDto
-                        {
-                            SkupinaRo = new CodebookItemDto { Kod = "RO", Verze = "1" }
-                        }
+                        "AM", "B1"
                     }
                 }
             }

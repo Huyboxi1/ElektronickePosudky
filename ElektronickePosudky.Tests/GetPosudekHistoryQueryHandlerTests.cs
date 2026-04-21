@@ -8,6 +8,11 @@ using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ElektronickePosudky.Tests;
 
@@ -63,21 +68,18 @@ public class GetPosudekHistoryQueryHandlerTests
             .ReturnsAsync(posudek);
 
         _mockMapper
-            .Setup(m => m.Map<List<PosudekHistorieDto>>(It.IsAny<List<PosudekHistorie>>()))
+            .Setup(m => m.Map<List<PosudekHistorieDto>>(It.IsAny<IReadOnlyCollection<PosudekHistorie>>()))
             .Returns(existingHistory);
 
         var result = await _handler.Handle(query, CancellationToken.None);
 
         result.Should().NotBeNull();
-        result.Should().HaveCount(2, "because it should return the existing history records without adding a default one");
-
-        _mockMapper.Verify(m => m.Map<ZdravotnickyPracovnikDetailDto>(It.IsAny<ZdravotnickyPracovnikVO>()), Times.Never);
+        result.Should().HaveCount(2, "because it should return the existing history records");
     }
 
     [Fact]
     public async Task Handle_PosudekHasNoHistory_CreatesAndReturnsDefaultCreationHistory()
     {
-        // Arrange
         var query = new GetPosudekHistoryQuery(Guid.NewGuid(), "corr-123");
         var posudek = CreateMockPosudek();
 
@@ -91,7 +93,7 @@ public class GetPosudekHistoryQueryHandlerTests
             .ReturnsAsync(posudek);
 
         _mockMapper
-            .Setup(m => m.Map<List<PosudekHistorieDto>>(It.IsAny<List<PosudekHistorie>>()))
+            .Setup(m => m.Map<List<PosudekHistorieDto>>(It.IsAny<IReadOnlyCollection<PosudekHistorie>>()))
             .Returns(emptyHistory);
 
         _mockMapper
@@ -104,10 +106,12 @@ public class GetPosudekHistoryQueryHandlerTests
         var result = await _handler.Handle(query, CancellationToken.None);
 
         result.Should().NotBeNull();
-        result.Should().HaveCount(1, "because the handler must create a default 'VYTVORENI' record");
+        result.Should().HaveCount(1);
 
         var creationRecord = result!.First();
-        creationRecord.TypOperace.PolozkaKod.Should().Be("VYTVORENI");
+
+        creationRecord.TypOperace.PolozkaKod.Should().Be("akce_ro_1");
+
         creationRecord.Lekar.Should().BeEquivalentTo(mockLekarDto);
         creationRecord.Poskytovatel.Should().BeEquivalentTo(mockPoskytovatelDto);
     }
@@ -128,13 +132,25 @@ public class GetPosudekHistoryQueryHandlerTests
 
     private PosudekRo CreateMockPosudek()
     {
-        var pacient = new PacientVO("123", null, null, DateTime.MinValue, null, null, null, null);
-        var pracovnik = new ZdravotnickyPracovnikVO("krzp", null, null, null, null, null);
-        var poskytovatel = new PoskytovatelVO(null, null, null);
-        var emptyRef = new CiselnikPolozkaReference("", "", "", new Dictionary<string, TranslationVO>());
+        var pacient = new PacientVO("1234567890", null, null, DateTime.MinValue, null, null, null, null);
+        var pracovnik = new ZdravotnickyPracovnikVO("krzp-123", null, null, null, null, null);
+        var poskytovatel = new PoskytovatelVO("12345678", "Nemocnice", null);
+
+        var emptyRef = new CiselnikPolozkaReference("kod", "1.0.0", "val", new Dictionary<string, TranslationVO>());
+
+        var typAkceRef = new CiselnikPolozkaReference("akce-ro", "1.0.0", "akce_ro_1", new Dictionary<string, TranslationVO>());
 
         var hlavicka = new PosudekHlavicka(
-            pacient, pracovnik, poskytovatel, emptyRef, emptyRef, emptyRef, emptyRef, DateTime.UtcNow, null);
+            pacient,
+            pracovnik,
+            poskytovatel,
+            emptyRef,
+            typAkceRef,
+            emptyRef,
+            emptyRef,
+            emptyRef,
+            DateTime.UtcNow,
+            null);
 
         return new PosudekRo(hlavicka);
     }

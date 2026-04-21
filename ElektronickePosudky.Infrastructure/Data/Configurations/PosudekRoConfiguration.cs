@@ -18,6 +18,9 @@ public class PosudekRoConfiguration : IEntityTypeConfiguration<PosudekRo>
             h.OwnsOne(x => x.PoskytovatelZdravotnickychSluzeb);
 
             h.OwnsOne(x => x.OdbornostLekare, o => o.Ignore(c => c.Preklady));
+
+            h.OwnsOne(x => x.TypAkce, t => t.Ignore(c => c.Preklady));
+
             h.OwnsOne(x => x.StavPosudku, s => s.Ignore(c => c.Preklady));
             h.OwnsOne(x => x.DruhProhlidky, d => d.Ignore(c => c.Preklady));
             h.OwnsOne(x => x.DruhPosudku, d => d.Ignore(c => c.Preklady));

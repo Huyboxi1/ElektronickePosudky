@@ -192,6 +192,9 @@
   <data name="PlatnostDoInvalid" xml:space="preserve">
     <value>Validity until must be later than date of issue.</value>
   </data>
+    <data name="CodebookKodInvalidLength" xml:space="preserve">
+    <value>The dialer code must be 10 characters long.</value>
+  </data>
   <data name="PosudekIdRequired" xml:space="preserve">
     <value>Medical certificate identifier is required.</value>
   </data>

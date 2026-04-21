@@ -9,3 +9,4 @@
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/refint/ElektronickePosudky.Domain.dll
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/ElektronickePosudky.Domain.pdb
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/ref/ElektronickePosudky.Domain.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Domain/obj/Debug/net8.0/ElektronickePosudky.Domain.sourcelink.json

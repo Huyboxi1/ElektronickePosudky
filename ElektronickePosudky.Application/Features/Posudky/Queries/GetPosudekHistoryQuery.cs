@@ -3,6 +3,11 @@ using ElektronickePosudky.Application.DTOs;
 using ElektronickePosudky.Application.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ElektronickePosudky.Application.Features.Posudky.Queries;
 
@@ -38,19 +43,17 @@ public class GetPosudekHistoryQueryHandler : IRequestHandler<GetPosudekHistoryQu
             return null;
         }
 
-        // Map domain history records to DTOs
         var result = _mapper.Map<List<PosudekHistorieDto>>(posudek.Historie.ToList());
 
-        // If no history records exist, create a default creation record
         if (result.Count == 0)
         {
             var creationHistory = new PosudekHistorieDto
             {
                 TypOperace = new CiselnikPolozkaReferenceDto
                 {
-                    CiselnikKod = "VYTVORENI",
-                    CiselnikVerze = "1.0",
-                    PolozkaKod = "VYTVORENI",
+                    CiselnikKod = posudek.Hlavicka.TypAkce.CiselnikKod,
+                    CiselnikVerze = posudek.Hlavicka.TypAkce.CiselnikVerze,
+                    PolozkaKod = posudek.Hlavicka.TypAkce.PolozkaKod,
                     Preklady = new Dictionary<string, TranslationItemDto>
                     {
                         { "cs", new TranslationItemDto { Nazev = "Vytvoření", Popis = "Vytvoření posudku" } }

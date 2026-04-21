@@ -6,6 +6,10 @@ using ElektronickePosudky.Domain.Entities.PosudekAggregate;
 using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Moq;
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace ElektronickePosudky.Tests;
@@ -44,13 +48,14 @@ public class CreatePosudekCommandHandlerTests
     {
         var dummyData = new PosudekRoCreateDto
         {
-            Rid = "123456789",
+            Rid = "1234567890",
             KrzpId = "KRZP-001",
-            StavPosudku = new CodebookItemDto { Kod = "STAV1", Verze = "1" },
-            DruhProhlidky = new CodebookItemDto { Kod = "DRUH1", Verze = "1" },
-            DruhPosudku = new CodebookItemDto { Kod = "POS1", Verze = "1" },
-
-            Zpusobilosti = new List<PosudekZpusobilostDto>()
+            TypAkceKod = "akce_ro_1",
+            StavPosudkuKod = "stav_posudku_1",
+            DruhProhlidkyKod = "druh_prohlidky_ro_1",
+            DruhPosudkuKod = "druh_posudku_ro_1",
+            DatumVystaveni = DateTime.Now,
+            Zpusobilosti = new List<PosudekZpusobilostCreateDto>()
         };
         var command = new CreatePosudekCommand(dummyData, "corr-123");
 
@@ -82,10 +87,13 @@ public class CreatePosudekCommandHandlerTests
     {
         var dummyData = new PosudekRoCreateDto
         {
-            Rid = "123456789",
-            StavPosudku = new CodebookItemDto(),
-            DruhProhlidky = new CodebookItemDto(),
-            DruhPosudku = new CodebookItemDto()
+            Rid = "1234567890",
+            KrzpId = "KRZP-001",
+            TypAkceKod = "akce_ro_1",
+            StavPosudkuKod = "stav_posudku_1",
+            DruhProhlidkyKod = "druh_prohlidky_ro_1",
+            DruhPosudkuKod = "druh_posudku_ro_1",
+            Zpusobilosti = new List<PosudekZpusobilostCreateDto>()
         };
         var command = new CreatePosudekCommand(dummyData, "corr-123");
 

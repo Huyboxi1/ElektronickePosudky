@@ -9,6 +9,7 @@ public class PosudekHlavicka
     public PoskytovatelVO PoskytovatelZdravotnickychSluzeb { get; private set; } = null!;
 
     public CiselnikPolozkaReference OdbornostLekare { get; private set; } = null!;
+    public CiselnikPolozkaReference TypAkce { get; private set; } = null!;
     public CiselnikPolozkaReference StavPosudku { get; private set; } = null!;
     public CiselnikPolozkaReference DruhProhlidky { get; private set; } = null!;
     public CiselnikPolozkaReference DruhPosudku { get; private set; } = null!;
@@ -21,27 +22,39 @@ public class PosudekHlavicka
     private PosudekHlavicka()
     {
     }
+
     public PosudekHlavicka(
         PacientVO pacient,
         ZdravotnickyPracovnikVO zdravotnickyPracovnik,
         PoskytovatelVO poskytovatelZdravotnickychSluzeb,
         CiselnikPolozkaReference odbornostLekare,
+        CiselnikPolozkaReference typAkce,
         CiselnikPolozkaReference stavPosudku,
         CiselnikPolozkaReference druhProhlidky,
         CiselnikPolozkaReference druhPosudku,
         DateTime datumVystaveni,
-        DateTime? platnostDo = null)
+        DateTime? platnostDo = null,
+        DateTime? datumVytvoreni = null)
     {
         Pacient = pacient;
         ZdravotnickyPracovnik = zdravotnickyPracovnik;
         PoskytovatelZdravotnickychSluzeb = poskytovatelZdravotnickychSluzeb;
         OdbornostLekare = odbornostLekare;
+        TypAkce = typAkce;
         StavPosudku = stavPosudku;
         DruhProhlidky = druhProhlidky;
         DruhPosudku = druhPosudku;
         DatumVystaveni = datumVystaveni;
         PlatnostDo = platnostDo;
-        DatumVytvoreni = DateTime.UtcNow;
+
+        DatumVytvoreni = datumVytvoreni ?? DateTime.UtcNow;
+
+        VerzeZaznamu = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+    }
+
+    public void AktualizovatStav(CiselnikPolozkaReference novyStav)
+    {
+        StavPosudku = novyStav;
         VerzeZaznamu = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
     }
 }
@@ -80,17 +93,6 @@ public class PosudekRo
 
     public void Zneplatnit(CiselnikPolozkaReference newStav)
     {
-        var novaHlavicka = new PosudekHlavicka(
-            Hlavicka.Pacient,
-            Hlavicka.ZdravotnickyPracovnik,
-            Hlavicka.PoskytovatelZdravotnickychSluzeb,
-            Hlavicka.OdbornostLekare,
-            newStav,  // Update the state
-            Hlavicka.DruhProhlidky,
-            Hlavicka.DruhPosudku,
-            Hlavicka.DatumVystaveni,
-            Hlavicka.PlatnostDo
-        );
-        Hlavicka = novaHlavicka;
+        Hlavicka.AktualizovatStav(newStav);
     }
 }

@@ -21,11 +21,17 @@ public class CiselnikRepository : ICiselnikRepository
             .ToListAsync(cancellationToken);
     }
 
-    public async Task<List<CiselnikPolozka>> GetItemsByCodeAsync(string kod, CancellationToken cancellationToken = default)
+    public async Task<List<CiselnikPolozka>> GetItemsByCodeAsync(string ciselnikKod, CancellationToken cancellationToken = default)
     {
         return await _dbContext.CiselnikPolozky
             .AsNoTracking()
-            .Where(x => x.Kod == kod)
+            .Where(x => x.CiselnikKod == ciselnikKod)
             .ToListAsync(cancellationToken);
+    }
+
+    public async Task<bool> PolozkaExistsAsync(string ciselnikKod, string polozkaKod, CancellationToken cancellationToken = default)
+    {
+        return await _dbContext.CiselnikPolozky
+            .AnyAsync(x => x.CiselnikKod == ciselnikKod && x.Kod == polozkaKod, cancellationToken);
     }
 }

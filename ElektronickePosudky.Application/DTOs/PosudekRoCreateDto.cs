@@ -1,49 +1,48 @@
 namespace ElektronickePosudky.Application.DTOs;
 
-public class CodebookItemDto
+public class HarmonizovanyKodCreateDto
 {
-    public string Kod { get; set; } = string.Empty;
-    public string Verze { get; set; } = string.Empty;
-}
+    public string HarmonizovanyKod { get; set; } = string.Empty;
 
-public class HarmonizovanyKodDetailDto
-{
-    public CodebookItemDto HarmonizovanyKod { get; set; } = null!;
-    public List<CodebookItemDto> SkupinaRo { get; set; } = new();
+    public List<string> SkupinaRoKody { get; set; } = new();
+
     public string? UpresneniText { get; set; }
 }
 
-public class NarodniKodDetailDto
+public class NarodniKodCreateDto
 {
-    public CodebookItemDto NarodniKod { get; set; } = null!;
-    public CodebookItemDto SkupinaRo { get; set; } = null!;
+    public string NarodniKod { get; set; } = string.Empty;
+
+    public string SkupinaRoKod { get; set; } = string.Empty;
+
     public string? UpresneniText { get; set; }
 }
 
-public class PosudekSkupinaRoDetailDto
+public class PosudekZpusobilostCreateDto
 {
-    public CodebookItemDto SkupinaRo { get; set; } = null!;
-}
+    public string SkupinaZadateleRidicKod { get; set; } = string.Empty;
 
-public class PosudekZpusobilostDto
-{
-    public CodebookItemDto SkupinaZadateleRidic { get; set; } = null!;
-    public List<PosudekSkupinaRoDetailDto> SkupinyRidicskehoOpravneni { get; set; } = new();
-    public CodebookItemDto Vysledek { get; set; } = null!;
-    public List<HarmonizovanyKodDetailDto> HarmonizovaneKody { get; set; } = new();
-    public List<NarodniKodDetailDto> NarodniKody { get; set; } = new();
+    public List<string> SkupinyRidicskehoOpravneniKody { get; set; } = new();
+
+    public string VysledekKod { get; set; } = string.Empty;
+
+    public List<HarmonizovanyKodCreateDto> HarmonizovaneKody { get; set; } = new();
+    public List<NarodniKodCreateDto> NarodniKody { get; set; } = new();
 }
 
 public class PosudekRoCreateDto
 {
     public string Rid { get; set; } = string.Empty;
     public string KrzpId { get; set; } = string.Empty;
-    public CodebookItemDto TypAkce { get; set; } = null!;
-    public CodebookItemDto StavPosudku { get; set; } = null!;
-    public CodebookItemDto DruhProhlidky { get; set; } = null!;
-    public CodebookItemDto DruhPosudku { get; set; } = null!;
+
+    public string TypAkceKod { get; set; } = string.Empty;
+    public string StavPosudkuKod { get; set; } = string.Empty;
+    public string DruhProhlidkyKod { get; set; } = string.Empty;
+    public string DruhPosudkuKod { get; set; } = string.Empty;
+
     public DateTime DatumVystaveni { get; set; }
     public DateTime? PlatnostDo { get; set; }
     public Guid? OpakovanyPosudekId { get; set; }
-    public List<PosudekZpusobilostDto> Zpusobilosti { get; set; } = new();
+
+    public List<PosudekZpusobilostCreateDto> Zpusobilosti { get; set; } = new();
 }

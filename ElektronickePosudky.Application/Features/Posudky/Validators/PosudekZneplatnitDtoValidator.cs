@@ -1,22 +1,22 @@
-using FluentValidation;
 using ElektronickePosudky.Application.DTOs;
+using ElektronickePosudky.Application.Repositories;
+using FluentValidation;
 
 namespace ElektronickePosudky.Application.Features.Posudky.Validators;
 
 public class PosudekZneplatnitDtoValidator : AbstractValidator<PosudekZneplatnitDto>
 {
-    public PosudekZneplatnitDtoValidator()
+    public PosudekZneplatnitDtoValidator(ICiselnikRepository repository)
     {
         RuleFor(x => x.KrzpId)
-            .NotEmpty().WithMessage("KrzpIdRequired")
-            .MaximumLength(50).WithMessage("KrzpIdTooLong");
+            .NotEmpty().WithMessage("KrzpIdRequired");
 
         RuleFor(x => x.Ico)
-            .NotEmpty().WithMessage("IcoRequired")
-            .MaximumLength(20).WithMessage("IcoTooLong");
+            .NotEmpty().WithMessage("IcoRequired");
 
-        RuleFor(x => x.DuvodZneplatneni)
-            .NotNull()
-            .SetValidator(new CodebookItemDtoValidator());
+        RuleFor(x => x.DuvodZneplatneniKod)
+            .NotEmpty().WithMessage("CodebookKodRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("akce-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
     }
 }

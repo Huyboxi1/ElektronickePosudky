@@ -79,13 +79,11 @@ public class PosudekRepository : IPosudekRepository
     {
         var query = _dbContext.Posudky.AsNoTracking();
 
-        // RID filter
         if (!string.IsNullOrWhiteSpace(rid))
         {
             query = query.Where(x => x.Hlavicka.Pacient.Rid == rid);
         }
 
-        // Date range filters
         if (datumOd.HasValue)
         {
             query = query.Where(x => x.Hlavicka.DatumVystaveni >= datumOd.Value);

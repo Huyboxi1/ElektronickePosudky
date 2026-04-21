@@ -12,8 +12,6 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateMap<CodebookItemDto, CodebookReference>();
-        CreateMap<CodebookReference, CodebookItemDto>();
 
         CreateMap<Ciselnik, CiselnikDto>()
             .ForMember(dest => dest.Preklady, opt => opt.MapFrom(src =>

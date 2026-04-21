@@ -1,141 +1,114 @@
 using ElektronickePosudky.Application.DTOs;
+using ElektronickePosudky.Application.Repositories;
 using FluentValidation;
 
 namespace ElektronickePosudky.Application.Features.Posudky.Validators;
 
-public class CodebookItemDtoValidator : AbstractValidator<CodebookItemDto>
+public class HarmonizovanyKodCreateDtoValidator : AbstractValidator<HarmonizovanyKodCreateDto>
 {
-    public CodebookItemDtoValidator()
-    {
-        RuleFor(x => x.Kod)
-            .NotEmpty()
-            .WithMessage("CodebookKodRequired");
-
-        RuleFor(x => x.Verze)
-            .NotEmpty()
-            .WithMessage("CodebookVerzeRequired");
-    }
-}
-
-public class HarmonizovanyKodDetailDtoValidator : AbstractValidator<HarmonizovanyKodDetailDto>
-{
-    public HarmonizovanyKodDetailDtoValidator()
+    public HarmonizovanyKodCreateDtoValidator(ICiselnikRepository repository)
     {
         RuleFor(x => x.HarmonizovanyKod)
-            .NotNull()
-            .WithMessage("HarmonizovanyKodRequired")
-            .SetValidator(new CodebookItemDtoValidator());
+            .NotEmpty().WithMessage("HarmonizovanyKodRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("seznam-harmonizovane-kody-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
 
-        RuleForEach(x => x.SkupinaRo)
-            .SetValidator(new CodebookItemDtoValidator());
+        RuleForEach(x => x.SkupinaRoKody)
+            .NotEmpty().WithMessage("SkupinaRoRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("seznam-skupin-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
     }
 }
 
-public class NarodniKodDetailDtoValidator : AbstractValidator<NarodniKodDetailDto>
+public class NarodniKodCreateDtoValidator : AbstractValidator<NarodniKodCreateDto>
 {
-    public NarodniKodDetailDtoValidator()
+    public NarodniKodCreateDtoValidator(ICiselnikRepository repository)
     {
         RuleFor(x => x.NarodniKod)
-            .NotNull()
-            .WithMessage("NarodniKodRequired")
-            .SetValidator(new CodebookItemDtoValidator());
+            .NotEmpty().WithMessage("NarodniKodRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("seznam-narodni-kody-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
 
-        RuleFor(x => x.SkupinaRo)
-            .NotNull()
-            .WithMessage("SkupinaRoRequired")
-            .SetValidator(new CodebookItemDtoValidator());
+        RuleFor(x => x.SkupinaRoKod)
+            .NotEmpty().WithMessage("SkupinaRoRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("seznam-skupin-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
     }
 }
 
-public class PosudekSkupinaRoDetailDtoValidator : AbstractValidator<PosudekSkupinaRoDetailDto>
+public class PosudekZpusobilostCreateDtoValidator : AbstractValidator<PosudekZpusobilostCreateDto>
 {
-    public PosudekSkupinaRoDetailDtoValidator()
+    public PosudekZpusobilostCreateDtoValidator(ICiselnikRepository repository)
     {
-        RuleFor(x => x.SkupinaRo)
-            .NotNull()
-            .WithMessage("SkupinaRoRequired")
-            .SetValidator(new CodebookItemDtoValidator());
-    }
-}
+        RuleFor(x => x.SkupinaZadateleRidicKod)
+            .NotEmpty().WithMessage("SkupinaZadateleRidicRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("skupina-zadatel-ridic-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
 
-public class PosudekZpusobilostDtoValidator : AbstractValidator<PosudekZpusobilostDto>
-{
-    public PosudekZpusobilostDtoValidator()
-    {
-        RuleFor(x => x.SkupinaZadateleRidic)
-            .NotNull()
-            .WithMessage("SkupinaZadateleRidicRequired")
-            .SetValidator(new CodebookItemDtoValidator());
+        RuleFor(x => x.SkupinyRidicskehoOpravneniKody)
+            .NotEmpty().WithMessage("SkupinyRidicskehoOpravneniRequired");
 
-        RuleFor(x => x.SkupinyRidicskehoOpravneni)
-            .NotEmpty()
-            .WithMessage("SkupinyRidicskehoOpravneniRequired");
+        RuleForEach(x => x.SkupinyRidicskehoOpravneniKody)
+            .NotEmpty().WithMessage("SkupinaRoRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("seznam-skupin-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
 
-        RuleForEach(x => x.SkupinyRidicskehoOpravneni)
-            .SetValidator(new PosudekSkupinaRoDetailDtoValidator());
-
-        RuleFor(x => x.Vysledek)
-            .NotNull()
-            .WithMessage("VysledekRequired")
-            .SetValidator(new CodebookItemDtoValidator());
+        RuleFor(x => x.VysledekKod)
+            .NotEmpty().WithMessage("VysledekRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("vysledek-posudku-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
 
         RuleForEach(x => x.HarmonizovaneKody)
-            .SetValidator(new HarmonizovanyKodDetailDtoValidator());
+            .SetValidator(new HarmonizovanyKodCreateDtoValidator(repository));
 
         RuleForEach(x => x.NarodniKody)
-            .SetValidator(new NarodniKodDetailDtoValidator());
+            .SetValidator(new NarodniKodCreateDtoValidator(repository));
     }
 }
 
 public class PosudekRoCreateDtoValidator : AbstractValidator<PosudekRoCreateDto>
 {
-    public PosudekRoCreateDtoValidator()
+    public PosudekRoCreateDtoValidator(ICiselnikRepository repository)
     {
         RuleFor(x => x.Rid)
-            .NotEmpty()
-            .Length(10)
-            .WithMessage("RidInvalidLength");
+            .NotEmpty().WithMessage("RidInvalidLength")
+            .Length(10).WithMessage("RidInvalidLength");
 
         RuleFor(x => x.KrzpId)
-            .NotEmpty()
-            .WithMessage("KrzpIdRequired");
+            .NotEmpty().WithMessage("KrzpIdRequired");
 
-        RuleFor(x => x.TypAkce)
-            .NotNull()
-            .WithMessage("TypAkceRequired")
-            .SetValidator(new CodebookItemDtoValidator());
+        RuleFor(x => x.TypAkceKod)
+            .NotEmpty().WithMessage("TypAkceRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("akce-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
 
-        RuleFor(x => x.StavPosudku)
-            .NotNull()
-            .WithMessage("StavPosudkuRequired")
-            .SetValidator(new CodebookItemDtoValidator());
+        RuleFor(x => x.StavPosudkuKod)
+            .NotEmpty().WithMessage("StavPosudkuRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("stav-posudku", kod, ct))
+            .WithMessage("InvalidCodebookValue");
 
-        RuleFor(x => x.DruhProhlidky)
-            .NotNull()
-            .WithMessage("DruhProhlidkyRequired")
-            .SetValidator(new CodebookItemDtoValidator());
+        RuleFor(x => x.DruhProhlidkyKod)
+            .NotEmpty().WithMessage("DruhProhlidkyRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("druh-prohlidky-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
 
-        RuleFor(x => x.DruhPosudku)
-            .NotNull()
-            .WithMessage("DruhPosudkuRequired")
-            .SetValidator(new CodebookItemDtoValidator());
+        RuleFor(x => x.DruhPosudkuKod)
+            .NotEmpty().WithMessage("DruhPosudkuRequired")
+            .MustAsync((kod, ct) => repository.PolozkaExistsAsync("druh-posudku-ro", kod, ct))
+            .WithMessage("InvalidCodebookValue");
 
         RuleFor(x => x.DatumVystaveni)
-            .NotEmpty()
-            .WithMessage("DatumVystaveniRequired")
-            .LessThanOrEqualTo(DateTime.Now)
-            .WithMessage("DatumVystaveniFuture");
+            .NotEmpty().WithMessage("DatumVystaveniRequired")
+            .LessThanOrEqualTo(DateTime.Now).WithMessage("DatumVystaveniFuture");
 
         RuleFor(x => x.PlatnostDo)
-            .GreaterThanOrEqualTo(x => x.DatumVystaveni)
-            .WithMessage("PlatnostDoInvalid")
+            .GreaterThanOrEqualTo(x => x.DatumVystaveni).WithMessage("PlatnostDoInvalid")
             .When(x => x.PlatnostDo.HasValue);
 
         RuleFor(x => x.Zpusobilosti)
-            .NotEmpty()
-            .WithMessage("ZpusobilostiRequired");
+            .NotEmpty().WithMessage("ZpusobilostiRequired");
 
         RuleForEach(x => x.Zpusobilosti)
-            .SetValidator(new PosudekZpusobilostDtoValidator());
+            .SetValidator(new PosudekZpusobilostCreateDtoValidator(repository));
     }
 }

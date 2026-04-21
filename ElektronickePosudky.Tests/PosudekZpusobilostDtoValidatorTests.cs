@@ -1,47 +1,60 @@
 using ElektronickePosudky.Application.DTOs;
 using ElektronickePosudky.Application.Features.Posudky.Validators;
+using ElektronickePosudky.Application.Repositories;
 using FluentAssertions;
+using Moq;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace ElektronickePosudky.Tests.Features.Posudky.Validators;
 
-public class PosudekZpusobilostDtoValidatorTests
+public class PosudekZpusobilostCreateDtoValidatorTests
 {
-    private readonly PosudekZpusobilostDtoValidator _validator = new();
+    private readonly Mock<ICiselnikRepository> _mockRepo;
+    private readonly PosudekZpusobilostCreateDtoValidator _validator;
+
+    public PosudekZpusobilostCreateDtoValidatorTests()
+    {
+        _mockRepo = new Mock<ICiselnikRepository>();
+
+        _mockRepo.Setup(x => x.PolozkaExistsAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                 .ReturnsAsync(true);
+
+        _validator = new PosudekZpusobilostCreateDtoValidator(_mockRepo.Object);
+    }
 
     [Fact]
-    public void Should_Fail_If_SkupinyRidicskehoOpravneni_Is_Empty()
+    public async Task Should_Fail_If_SkupinyRidicskehoOpravneni_Is_Empty()
     {
-        var dto = new PosudekZpusobilostDto
+        var dto = new PosudekZpusobilostCreateDto
         {
-            SkupinaZadateleRidic = new CodebookItemDto { Kod = "A", Verze = "1" },
-            Vysledek = new CodebookItemDto { Kod = "B", Verze = "1" },
-            SkupinyRidicskehoOpravneni = new List<PosudekSkupinaRoDetailDto>() // Empty
+            SkupinaZadateleRidicKod = "skupina_ro_1",
+            VysledekKod = "vysledek_posudku_ro_1",
+            SkupinyRidicskehoOpravneniKody = new List<string>()
         };
 
-        var result = _validator.Validate(dto);
+        var result = await _validator.ValidateAsync(dto);
 
         result.Errors.Should().Contain(e => e.ErrorMessage == "SkupinyRidicskehoOpravneniRequired");
     }
 
     [Fact]
-    public void Should_Trigger_Nested_HarmonizovaneKody_Validator()
+    public async Task Should_Trigger_Nested_HarmonizovaneKody_Validator()
     {
-        var dto = new PosudekZpusobilostDto
+        var dto = new PosudekZpusobilostCreateDto
         {
-            SkupinaZadateleRidic = new CodebookItemDto { Kod = "A", Verze = "1" },
-            Vysledek = new CodebookItemDto { Kod = "B", Verze = "1" },
-            SkupinyRidicskehoOpravneni = new List<PosudekSkupinaRoDetailDto> {
-                new() { SkupinaRo = new CodebookItemDto { Kod = "B", Verze = "1" } }
-            },
-            HarmonizovaneKody = new List<HarmonizovanyKodDetailDto>
+            SkupinaZadateleRidicKod = "skupina_ro_1",
+            VysledekKod = "vysledek_posudku_ro_1",
+            SkupinyRidicskehoOpravneniKody = new List<string> { "B" },
+            HarmonizovaneKody = new List<HarmonizovanyKodCreateDto>
             {
-                new() { HarmonizovanyKod = null! }
+                new HarmonizovanyKodCreateDto { HarmonizovanyKod = "" }
             }
         };
 
-        var result = _validator.Validate(dto);
+        var result = await _validator.ValidateAsync(dto);
 
         result.Errors.Should().Contain(e => e.ErrorMessage == "HarmonizovanyKodRequired");
     }

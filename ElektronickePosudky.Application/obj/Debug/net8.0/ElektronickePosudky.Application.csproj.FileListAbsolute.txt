@@ -13,3 +13,4 @@
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/refint/ElektronickePosudky.Application.dll
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ElektronickePosudky.Application.pdb
 /Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ref/ElektronickePosudky.Application.dll
+/Users/huydv/8senna/ElektronickePosudky/ElektronickePosudky.Application/obj/Debug/net8.0/ElektronickePosudky.Application.sourcelink.json

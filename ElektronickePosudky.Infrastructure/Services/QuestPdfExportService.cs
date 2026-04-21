@@ -42,8 +42,8 @@ public class QuestPdfExportService : IPdfExportService
         {
             row.RelativeItem().Column(column =>
             {
-                column.Item().Text("LÉKAŘSKÝ POSUDEK").FontSize(20).SemiBold().FontColor(Colors.Blue.Darken2);
-                column.Item().Text("o zdravotní způsobilosti k řízení motorových vozidel").FontSize(14);
+                column.Item().Text("LÉKAŘSKÝ POSUDEK (Medical Certificate)").FontSize(20).SemiBold().FontColor(Colors.Blue.Darken2);
+                column.Item().Text("o zdravotní způsobilosti k řízení motorových vozidel (Fitness for Driving Motor Vehicles)").FontSize(14);
             });
         });
     }
@@ -54,15 +54,14 @@ public class QuestPdfExportService : IPdfExportService
         {
             column.Spacing(10);
 
-            // Thông tin bệnh nhân
             column.Item().Background(Colors.Grey.Lighten3).Padding(5).Text("1. Údaje o pacientovi").SemiBold();
-            column.Item().Text($"Jméno a příjmení: {posudek.Hlavicka.Pacient.Jmeno} {posudek.Hlavicka.Pacient.Prijmeni}");
-            column.Item().Text($"Datum narození: {posudek.Hlavicka.Pacient.DatumNarozeni:dd.MM.yyyy}");
-            column.Item().Text($"Adresa trvalého pobytu: {posudek.Hlavicka.Pacient.Adresa}");
+            column.Item().Text($"Jméno a příjmení (First name and last name): {posudek.Hlavicka.Pacient.Jmeno} {posudek.Hlavicka.Pacient.Prijmeni}");
+            column.Item().Text($"Datum narození (Date of birth): {posudek.Hlavicka.Pacient.DatumNarozeni:dd.MM.yyyy}");
+            column.Item().Text($"Adresa trvalého pobytu (Address of permanent residence): {posudek.Hlavicka.Pacient.Adresa}");
 
             column.Item().PaddingTop(15).Background(Colors.Grey.Lighten3).Padding(5).Text("2. Závěr").SemiBold();
-            column.Item().Text($"Stav posudku (Mã trạng thái): {posudek.Hlavicka.StavPosudku.CiselnikKod}");
-            column.Item().Text($"Platnost do (Có giá trị đến): {posudek.Hlavicka.PlatnostDo:dd.MM.yyyy}");
+            column.Item().Text($"Stav posudku (Status): {posudek.Hlavicka.StavPosudku.CiselnikKod}");
+            column.Item().Text($"Platnost do (Valid until): {posudek.Hlavicka.PlatnostDo:dd.MM.yyyy}");
         });
     }
 }

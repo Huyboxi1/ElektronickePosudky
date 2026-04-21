@@ -52,6 +52,18 @@ The easiest way to get the project up and running is using Docker Compose.
 
 ---
 
+## 🌱 Seeding Initial Data
+
+The application strictly validates input requests against standardized medical codebooks (Číselníky) defined by the national TermX server. To ensure the API validations pass and the Postman test collection runs successfully, you must seed this initial data into your database.
+
+The mapping and seeding logic is completely integrated via EF Core's `HasData` within `CiselnikSeeder.cs`.
+
+**To insert the list of codelist values into the database manually**, open your terminal in the root directory of the solution and run the following command:
+
+```bash
+dotnet ef database update --project ElektronickePosudky.Infrastructure --startup-project ElektronickePosudky.Api
+```
+
 ## 🏗️ Architecture
 
 The project follows **Clean Architecture** (Onion Architecture) to ensure separation of concerns, testability, and maintainability.

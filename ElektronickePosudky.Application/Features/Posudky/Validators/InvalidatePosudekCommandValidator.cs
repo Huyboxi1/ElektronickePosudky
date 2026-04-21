@@ -1,11 +1,12 @@
-using FluentValidation;
 using ElektronickePosudky.Application.Features.Posudky.Commands;
+using ElektronickePosudky.Application.Repositories;
+using FluentValidation;
 
 namespace ElektronickePosudky.Application.Features.Posudky.Validators;
 
 public class InvalidatePosudekCommandValidator : AbstractValidator<InvalidatePosudekCommand>
 {
-    public InvalidatePosudekCommandValidator()
+    public InvalidatePosudekCommandValidator(ICiselnikRepository repository)
     {
         RuleFor(x => x.Id)
             .NotEmpty().WithMessage("PosudekIdRequired");
@@ -15,6 +16,6 @@ public class InvalidatePosudekCommandValidator : AbstractValidator<InvalidatePos
 
         RuleFor(x => x.Data)
             .NotNull()
-            .SetValidator(new PosudekZneplatnitDtoValidator());
+            .SetValidator(new PosudekZneplatnitDtoValidator(repository));
     }
 }
